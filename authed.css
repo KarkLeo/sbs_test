@@ -1,0 +1,3766 @@
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Light-19720b9f01dab32e5154f931defbf5f3fd7e36186b32560bb058eb1e6634e641.woff2) format("woff2"), url(/assets/DINPro-Light-1e367dd7cab948b21c322a737c2dbf2ced8eaff3c8c049a643733c07b1598de7.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Medium-343a3afde5df659d79dd1baf2565487590e385ae8b1ff714b30feed64e5773eb.woff2) format("woff2"), url(/assets/DINPro-Medium-a97dc41f8b4ca6d85f0f75a7901f1e6292514b4d6a19296d786446adc37e0f31.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Bold-9ae897234572e60e462abb4385cf3ba5ff7ea938c6c115ba1d63ca543504176a.woff2) format("woff2"), url(/assets/DINPro-Bold-5f849b8add0211f03ecba7611fc3f0c6baeecb77cd73488fc7094ebb70996d01.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Light-19720b9f01dab32e5154f931defbf5f3fd7e36186b32560bb058eb1e6634e641.woff2) format("woff2"), url(/assets/DINPro-Light-1e367dd7cab948b21c322a737c2dbf2ced8eaff3c8c049a643733c07b1598de7.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Medium-343a3afde5df659d79dd1baf2565487590e385ae8b1ff714b30feed64e5773eb.woff2) format("woff2"), url(/assets/DINPro-Medium-a97dc41f8b4ca6d85f0f75a7901f1e6292514b4d6a19296d786446adc37e0f31.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Bold-9ae897234572e60e462abb4385cf3ba5ff7ea938c6c115ba1d63ca543504176a.woff2) format("woff2"), url(/assets/DINPro-Bold-5f849b8add0211f03ecba7611fc3f0c6baeecb77cd73488fc7094ebb70996d01.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* line 5, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+body {
+  font-family: 'DIN Pro';
+  padding: 0;
+  margin: 0;
+  background-color: #f6f8fa;
+}
+
+/* line 13, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.pageContainer {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+/* line 22, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.pageContainer__header, .pageContainer__footer {
+  flex: 0 0 auto;
+}
+/* line 25, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.pageContainer__container {
+  flex: 1 0 auto;
+}
+
+/* line 30, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.container {
+  width: 100%;
+  padding: 65px 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1000px) {
+  /* line 30, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* line 40, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.container_withSideBar {
+  position: relative;
+  padding: 65px 0 65px 46px;
+}
+
+/* line 46, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.header {
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(90deg, #cb69e6 0%, #9567ff 45%, #776dfc 74%, #5973f8 100%);
+  z-index: 500;
+}
+/* line 55, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.header__sysNotifications {
+  display: block;
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 46px;
+  box-sizing: border-box;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+}
+/* line 71, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.header__sysNotifications_alert {
+  background-image: linear-gradient(90deg, rgba(255, 81, 108, 0.5) 0%, rgba(255, 50, 126, 0.5) 100%);
+}
+/* line 77, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.header__sysNotifications_notice {
+  background-image: linear-gradient(90deg, rgba(55, 140, 229, 0.5) 0%, rgba(2, 195, 229, 0.5) 100%);
+}
+@media screen and (max-width: 1000px) {
+  /* line 55, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .header__sysNotifications {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+/* line 90, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* line 100, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer_w1000 {
+  max-width: 1000px;
+}
+/* line 104, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer > * {
+  flex-grow: 1;
+  display: flex;
+  flex-basis: 16%;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+/* line 112, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer > * > * {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 118, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer__asideLeft {
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1000px) {
+  /* line 118, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .navContainer__asideLeft {
+    order: 1;
+  }
+}
+/* line 125, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer__asideRight {
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1000px) {
+  /* line 125, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .navContainer__asideRight {
+    order: 2;
+    flex-grow: 2;
+  }
+}
+/* line 133, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.navContainer__center {
+  flex-grow: 4;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  /* line 133, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .navContainer__center {
+    order: 3;
+    flex-grow: 3;
+  }
+}
+
+/* line 144, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.menuList {
+  padding: 0;
+  margin: 0 auto;
+}
+/* line 148, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.menuList__item {
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 154, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .mainMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 160, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .footerMenu {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* line 167, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.logo {
+  width: 75px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.775 19.185"><path fill="%23fff" fill-rule="evenodd" d="M.743 15.348h8.416a1.92 1.92 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.913 1.913 0 0 0-1.354-.564h-3.4a5.741 5.741 0 0 1-4.072-1.69A5.752 5.752 0 0 1 5.755 0h3.668v3.837H5.629a1.918 1.918 0 0 0-1.36 3.271h.007a1.913 1.913 0 0 0 1.352.565h3.53a5.739 5.739 0 0 1 4.066 1.689v.008a5.788 5.788 0 0 1 1.357 2.141h4.925a1.913 1.913 0 0 1 1.354.564 1.922 1.922 0 0 1-1.357 3.276h-4.919a5.776 5.776 0 0 1-1.358 2.149h-.007a5.733 5.733 0 0 1-4.059 1.689H.743z"/><path fill="%23fff" fill-rule="evenodd" d="M25.086 15.348h2.934a1.922 1.922 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.912 1.912 0 0 0-1.353-.564h-3.529a5.741 5.741 0 0 1-4.065-1.69 5.814 5.814 0 0 1-1.361-2.144h-5.951v-3.84h5.952a5.782 5.782 0 0 1 1.359-2.148A5.74 5.74 0 0 1 24.495 0h7.361v3.837h-7.361a1.907 1.907 0 0 0-1.353.558V4.4a1.911 1.911 0 0 0-.007 2.707h.007a1.914 1.914 0 0 0 1.353.565h3.525a5.739 5.739 0 0 1 4.066 1.689v.009a5.731 5.731 0 0 1 0 8.126h-.007a5.731 5.731 0 0 1-4.059 1.689h-8.359a5.776 5.776 0 0 0 5.425-3.837z"/></svg>');
+}
+@media screen and (max-width: 500px) {
+  /* line 167, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .logo {
+    width: 65px;
+    height: 35px;
+  }
+}
+/* line 181, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.logo_footer {
+  width: 55px;
+  height: 30px;
+  opacity: 0.6;
+}
+@media screen and (max-width: 500px) {
+  /* line 181, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .logo_footer {
+    width: 65px;
+    height: 35px;
+  }
+}
+
+/* line 195, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLinkWithIcon {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 40px;
+  display: inline-block;
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 10px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 0 50%;
+}
+/* line 213, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLinkWithIcon_wallet {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffffff" d="M29.2 29.4c-1.3 0-2.4-1.1-2.4-2.4v-3.7c0-1.3 1.1-2.4 2.4-2.4h8.9V17c0-1.4-1.2-2.6-2.6-2.6h-1.8l-.5-3c0-.2-.2-.4-.4-.6-.2-.1-.4-.2-.7-.1l-2 .5-.7-1.5c-.1-.2-.3-.4-.5-.4-.2-.1-.4 0-.6 0l-9.6 5h-7c-1.4 0-2.6 1.2-2.6 2.6v16.4c0 1.4 1.2 2.6 2.6 2.6h23.7c1.4 0 2.6-1.2 2.6-2.6v-3.9h-8.8zm2.5-16.8l.3 1.8h-.3l-.8-1.6.8-.2zm-3.3-1.3l1.5 3.2h-7.5l6-3.2zm.8 11.3h8.9c.4 0 .7.3.7.7V27c0 .4-.3.7-.7.7h-8.9c-.4 0-.7-.3-.7-.7v-3.7c0-.3.3-.7.7-.7z"/></svg>');
+}
+/* line 214, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLinkWithIcon_notifications {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffffff" d="M21.356 33.995c.403 1.071 1.431 1.838 2.644 1.838s2.238-.767 2.643-1.837c-.836.064-1.717.104-2.643.104-.927 0-1.807-.041-2.644-.105zM34.209 29h-.375l-2.5-3L30 19h-.013c-.406-2.45-2.28-4.393-4.687-4.921.004-.01.013-.019.016-.028l.367-1.102C25.857 12.427 25.55 12 25 12h-2c-.55 0-.857.427-.684.949l.367 1.102c.003.01.012.018.016.028-2.406.528-4.28 2.471-4.686 4.921H18l-1.334 7-2.5 3h-.375c-.55 0-1 .45-1 1s.42 1.161.934 1.358C13.725 31.358 18 33 24 33s10.275-1.642 10.275-1.642c.514-.197.934-.809.934-1.358s-.45-1-1-1z"/></svg>');
+  padding-right: 0;
+}
+/* line 218, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLinkWithIcon_signOut {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffffff" d="M16 14h4v2h-4v16h4v2h-4c-1.103 0-2-.897-2-2V16c0-1.103.897-2 2-2zm17 1v18c0 .337-.098.524-.189.63-.091.106-.256.276-.548.334l-10 2c-.086.024-.175.036-.263.036-.217 0-.431-.07-.607-.205-.247-.19-.393-.483-.393-.795V13c0-.312.146-.605.393-.795.176-.135.39-.205.607-.205.088 0 .177.012.263.035l10 2c.365.095.459.239.558.383.097.143.179.372.179.582zm-7.5 8.5c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"/></svg>');
+}
+/* line 219, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLinkWithIcon_signIn {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffffff" d="M35 30.208c-.644-.366-4.843-2.851-7-3.724v-3.777c.624-.456 1-1.158 1-2.223V17.5c0-2.475-1.5-4.5-4.5-4.5S20 15.025 20 17.5v2.984c0 1.075.376 1.779 1 2.233v3.767c-2.032.873-6.356 3.357-7 3.724-.801.455-1 .888-1 1.94V34.5c0 .275.225.5.5.5h22c.275 0 .5-.225.5-.5v-2.352c0-1.052-.199-1.485-1-1.94z"/></svg>');
+}
+/* line 221, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLinkWithIcon_mainMenu {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 221, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .headerLinkWithIcon_mainMenu {
+    display: inline-block;
+    padding-right: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffffff" d="M13 18.5c0 .275.225.5.5.5h21c.275 0 .5-.225.5-.5v-3c0-.275-.225-.5-.5-.5h-21c-.275 0-.5.225-.5.5v3zm0 7c0 .275.225.5.5.5h21c.275 0 .5-.225.5-.5v-3c0-.275-.225-.5-.5-.5h-21c-.275 0-.5.225-.5.5v3zm0 7c0 .275.225.5.5.5h21c.275 0 .5-.225.5-.5v-3c0-.275-.225-.5-.5-.5h-21c-.275 0-.5.225-.5.5v3z"/></svg>');
+  }
+}
+
+/* line 234, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 200ms ease-in-out;
+}
+/* line 241, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLink::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #14ccec;
+  transform: translateY(0px) scaleY(0.01);
+  opacity: 1;
+  transition: all 100ms ease-in-out;
+}
+/* line 252, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLink:hover::after {
+  transform: translateY(5px) scaleY(1);
+  opacity: 1;
+}
+/* line 258, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.headerLink_active::after {
+  transform: translateY(5px) scaleY(1);
+  opacity: 1;
+}
+
+/* line 267, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__selected {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 40px;
+  height: 40px;
+}
+/* line 277, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__selected::before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  border: 7px solid transparent;
+  border-top: 9px solid #ffffff;
+  transform-origin: 50% 30%;
+  transition: all 200ms ease-in-out;
+}
+/* line 291, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__selected:hover::before {
+  transform: scaleY(-1);
+}
+/* line 293, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__selected:hover + .language__list {
+  transform: scaleY(1);
+}
+/* line 299, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__list {
+  display: block;
+  position: absolute;
+  z-index: 50;
+  top: 50px;
+  padding: 0;
+  margin: 0 0 0 20px;
+  transform-origin: 50% 0%;
+  transform: scaleY(0);
+  transition: all 200ms ease-in-out;
+}
+/* line 312, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__list:hover {
+  transform: scaleY(1);
+}
+/* line 317, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__option {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 323, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.language__languageName {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/* line 333, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user {
+  display: flex;
+  text-decoration: none;
+}
+/* line 338, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user_message .user__avatar.avatar {
+  width: 30px;
+  height: 30px;
+}
+/* line 342, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user_message .user__name {
+  color: #6c8299;
+  line-height: 30px;
+}
+/* line 348, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user__avatar.avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+/* line 354, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user__title {
+  padding-right: 10px;
+}
+/* line 358, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user__name {
+  font-size: 18px;
+  color: #73eafe;
+  line-height: 20px;
+  text-align: left;
+  text-transform: none;
+  margin: 0;
+  white-space: nowrap;
+}
+/* line 368, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.user__position {
+  font-size: 14px;
+  color: #f6f8fa;
+  line-height: 20px;
+  text-align: left;
+  text-transform: none;
+  margin: 0;
+}
+
+/* line 378, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 500;
+  background-color: #25293a;
+}
+/* line 387, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.footer__copyright {
+  padding: 10px 40px;
+  background-color: #1a1e2e;
+  color: #8f96b2;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  /* line 387, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+  .footer__copyright {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* line 402, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.footerLink {
+  color: #babdcd;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 200ms ease-in-out;
+}
+/* line 408, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.footerLink:hover {
+  color: #14ccec;
+}
+/* line 412, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.footerLink_active {
+  color: #18a3bc;
+  text-decoration: none;
+}
+/* line 416, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.footerLink_active:hover {
+  color: #18a3bc;
+}
+
+/* line 422, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink {
+  display: block;
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 2px solid #babdcd;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 16px;
+  transition: all 200ms ease-in-out;
+}
+/* line 435, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink:hover {
+  border: 2px solid #14ccec;
+}
+/* line 439, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink_fb {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 97"><path fill="%23babdcd" d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037c-1.083 0-1.96.878-1.96 1.961v15.803c0 1.083.878 1.96 1.96 1.96H36.57v39.876c0 1.083.877 1.96 1.96 1.96h16.352c1.083 0 1.96-.878 1.96-1.96V54.287h14.654c1.083 0 1.96-.877 1.96-1.96l.006-15.803c0-.52-.207-1.018-.574-1.386-.367-.368-.867-.575-1.387-.575H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003c1.082 0 1.959-.878 1.959-1.96V1.98c0-1.081-.876-1.958-1.957-1.96z"/></svg>');
+}
+/* line 441, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink_fb:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 97"><path fill="%2314ccec" d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037c-1.083 0-1.96.878-1.96 1.961v15.803c0 1.083.878 1.96 1.96 1.96H36.57v39.876c0 1.083.877 1.96 1.96 1.96h16.352c1.083 0 1.96-.878 1.96-1.96V54.287h14.654c1.083 0 1.96-.877 1.96-1.96l.006-15.803c0-.52-.207-1.018-.574-1.386-.367-.368-.867-.575-1.387-.575H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003c1.082 0 1.959-.878 1.959-1.96V1.98c0-1.081-.876-1.958-1.957-1.96z"/></svg>');
+}
+/* line 445, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink_vk {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305 305"><path fill="%23babdcd" fill-rule="evenodd" d="M261.945 175.576c10.096 9.857 20.752 19.131 29.807 29.982 4 4.822 7.787 9.798 10.684 15.394 4.105 7.955.387 16.709-6.746 17.184l-44.34-.02c-11.436.949-20.559-3.655-28.23-11.474-6.139-6.253-11.824-12.908-17.727-19.372-2.42-2.642-4.953-5.128-7.979-7.093-6.053-3.929-11.307-2.726-14.766 3.587-3.523 6.421-4.322 13.531-4.668 20.687-.475 10.441-3.631 13.186-14.119 13.664-22.414 1.057-43.686-2.334-63.447-13.641-17.422-9.968-30.932-24.04-42.691-39.971-22.895-31.021-40.428-65.108-56.186-100.15C-2.01 76.458.584 72.22 9.295 72.07c14.465-.281 28.928-.261 43.41-.02 5.879.086 9.771 3.458 12.041 9.012 7.826 19.243 17.402 37.551 29.422 54.521 3.201 4.518 6.465 9.036 11.113 12.216 5.142 3.521 9.057 2.354 11.476-3.374 1.535-3.632 2.207-7.544 2.553-11.434 1.146-13.383 1.297-26.743-.713-40.079-1.234-8.323-5.922-13.711-14.227-15.286-4.238-.803-3.607-2.38-1.555-4.799 3.564-4.172 6.916-6.769 13.598-6.769h50.111c7.889 1.557 9.641 5.101 10.721 13.039l.043 55.663c-.086 3.073 1.535 12.192 7.07 14.226 4.43 1.448 7.35-2.096 10.008-4.905 11.998-12.734 20.561-27.783 28.211-43.366 3.395-6.852 6.314-13.968 9.143-21.078 2.096-5.276 5.385-7.872 11.328-7.757l48.229.043c1.43 0 2.877.021 4.262.258 8.127 1.385 10.354 4.881 7.844 12.817-3.955 12.451-11.65 22.827-19.174 33.251-8.043 11.129-16.645 21.877-24.621 33.072-7.328 10.223-6.746 15.376 2.357 24.255zm0 0" clip-rule="evenodd"/></svg>');
+}
+/* line 447, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink_vk:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305 305"><path fill="%2314ccec" fill-rule="evenodd" d="M261.945 175.576c10.096 9.857 20.752 19.131 29.807 29.982 4 4.822 7.787 9.798 10.684 15.394 4.105 7.955.387 16.709-6.746 17.184l-44.34-.02c-11.436.949-20.559-3.655-28.23-11.474-6.139-6.253-11.824-12.908-17.727-19.372-2.42-2.642-4.953-5.128-7.979-7.093-6.053-3.929-11.307-2.726-14.766 3.587-3.523 6.421-4.322 13.531-4.668 20.687-.475 10.441-3.631 13.186-14.119 13.664-22.414 1.057-43.686-2.334-63.447-13.641-17.422-9.968-30.932-24.04-42.691-39.971-22.895-31.021-40.428-65.108-56.186-100.15C-2.01 76.458.584 72.22 9.295 72.07c14.465-.281 28.928-.261 43.41-.02 5.879.086 9.771 3.458 12.041 9.012 7.826 19.243 17.402 37.551 29.422 54.521 3.201 4.518 6.465 9.036 11.113 12.216 5.142 3.521 9.057 2.354 11.476-3.374 1.535-3.632 2.207-7.544 2.553-11.434 1.146-13.383 1.297-26.743-.713-40.079-1.234-8.323-5.922-13.711-14.227-15.286-4.238-.803-3.607-2.38-1.555-4.799 3.564-4.172 6.916-6.769 13.598-6.769h50.111c7.889 1.557 9.641 5.101 10.721 13.039l.043 55.663c-.086 3.073 1.535 12.192 7.07 14.226 4.43 1.448 7.35-2.096 10.008-4.905 11.998-12.734 20.561-27.783 28.211-43.366 3.395-6.852 6.314-13.968 9.143-21.078 2.096-5.276 5.385-7.872 11.328-7.757l48.229.043c1.43 0 2.877.021 4.262.258 8.127 1.385 10.354 4.881 7.844 12.817-3.955 12.451-11.65 22.827-19.174 33.251-8.043 11.129-16.645 21.877-24.621 33.072-7.328 10.223-6.746 15.376 2.357 24.255zm0 0" clip-rule="evenodd"/></svg>');
+}
+/* line 451, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink_tw {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612"><path fill="%23babdcd" d="M612 116.258c-22.525 9.981-46.694 16.75-72.088 19.772 25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479-20.575-.688-39.926-6.348-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z"/></svg>');
+}
+/* line 453, /home/karkleo/sbs/app/assets/stylesheets/_runningTitle.scss */
+.socialLink_tw:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612"><path fill="%2314ccec" d="M612 116.258c-22.525 9.981-46.694 16.75-72.088 19.772 25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479-20.575-.688-39.926-6.348-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z"/></svg>');
+}
+
+/* line 3, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools {
+  position: absolute;
+  background-color: #282f36;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9000;
+}
+/* line 12, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools:hover > .sideBarBlock > .menuList {
+  width: 250px;
+}
+/* line 15, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools:hover > .sideBarBlock > .menuList .subMenuOpen::after {
+  opacity: 1;
+}
+/* line 20, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock {
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  margin: 0;
+  overflow: hidden;
+}
+/* line 28, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList {
+  width: 46px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: width 300ms ease-in-out;
+}
+/* line 35, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+}
+/* line 40, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#managers > a, #sideBarTools .sideBarBlock .menuList li#managers > .active, #sideBarTools .sideBarBlock .menuList li#managers > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M18 23.75v-.926c0-.138.095-.311.21-.385l3.58-2.304c.115-.074.21-.247.21-.385V19c-.55 0-1-.95-1-1.5V15c0-1.65 1.35-3 3-3s3 1.35 3 3v2.5c0 .55-.45 1.5-1 1.5v.75c0 .138.095.311.21.385l3.58 2.304c.116.074.21.248.21.385v.926c0 .138-.112.25-.25.25h-11.5c-.138 0-.25-.112-.25-.25zM16.5 28c.276 0 .5-.224.5-.5V27h7v.5c0 .276.224.5.5.5s.5-.224.5-.5V27h6v.5c0 .276.224.5.5.5s.5-.224.5-.5v-1c0-.276-.224-.5-.5-.5h-15c-.276 0-.5.224-.5.5v1c0 .276.224.5.5.5zm18.36 6.959l-1.386-.536c-.077-.049-.14-.165-.14-.257v-1c.367 0 .667-.633.667-1V31c0-1.1-.9-2-2-2s-2 .9-2 2v1.167c0 .367.3 1 .667 1v1c0 .092-.063.208-.14.257l-1.386.536c-.077.05-.14.166-.14.257v.618c-.002.09.073.165.165.165h5.667c.091 0 .166-.075.166-.167v-.618c0-.09-.063-.206-.14-.256zm-17.387-.536c-.077-.049-.14-.165-.14-.257v-1c.367 0 .667-.633.667-1V31c0-1.1-.9-2-2-2s-2 .9-2 2v1.167c0 .367.3 1 .667 1v1c0 .092-.063.208-.14.257l-1.386.536c-.077.05-.14.166-.14.257v.618c-.001.09.074.165.166.165h5.667c.091 0 .166-.075.166-.167v-.618c0-.091-.063-.207-.14-.257l-1.387-.535zm8 0c-.077-.049-.14-.165-.14-.257v-1c.367 0 .667-.633.667-1V31c0-1.1-.9-2-2-2s-2 .9-2 2v1.167c0 .367.3 1 .667 1v1c0 .092-.063.208-.14.257l-1.386.536c-.077.05-.14.166-.14.257v.618c-.001.09.074.165.166.165h5.667c.091 0 .166-.075.166-.167v-.618c0-.091-.063-.207-.14-.257l-1.387-.535z"/></svg>');
+}
+/* line 44, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#users > a, #sideBarTools .sideBarBlock .menuList li#users > .active, #sideBarTools .sideBarBlock .menuList li#users > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M35 33.148v2.5c0 .146-.121.336-.268.336H12.268c-.147 0-.268-.191-.268-.336v-2.5c0-1.053.199-1.485 1-1.94.644-.366 4.968-2.851 7-3.724v-3.767c-.624-.454-1-1.158-1-2.233V18.5c0-2.475 1.5-4.5 4.5-4.5s4.5 2.025 4.5 4.5v2.984c0 1.064-.376 1.767-1 2.223v3.777c2.157.873 6.356 3.357 7 3.724.801.455 1 .888 1 1.94zm-22.741-3.244l.139-.08c2.281-1.301 4.102-2.295 5.451-2.976-.624-.305-1.263-.583-1.849-.761v-2.628c1-.316 1-.806 1-1.546V20.13c0-1.722-.913-3.13-3-3.13-2.087 0-3 1.408-3 3.13v1.783c0 .748 0 1.237 1 1.554v2.62c-2 .607-4.639 2.336-5.088 2.591-.557.316-.912.617-.912 1.349v1.739c0 .101.084.234.186.234h4.427c.182-.822.629-1.519 1.646-2.096zm27.829-1.226C39.639 28.423 37 26.694 35 26.087v-2.628c1-.316 1-.806 1-1.546V20.13c0-1.722-.913-3.13-3-3.13-2.087 0-3 1.408-3 3.13v1.783c0 .748 0 1.237 1 1.554v2.62c-.579.176-1.209.448-1.826.749 1.915.953 4.201 2.277 5.21 2.861l.358.207c1.016.577 1.463 1.273 1.645 2.096h4.427c.102 0 .186-.133.186-.233v-1.739c0-.733-.356-1.034-.912-1.35z"/></svg>');
+  background-size: auto 30px;
+}
+/* line 48, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#users > a {
+  background-position: 7px 50%;
+}
+/* line 49, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#users > a:hover, #sideBarTools .sideBarBlock .menuList li#users > .active, #sideBarTools .sideBarBlock .menuList li#users > span {
+  background-position: 3px 50%;
+}
+/* line 51, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#traficSources > a, #sideBarTools .sideBarBlock .menuList li#traficSources > .active, #sideBarTools .sideBarBlock .menuList li#traficSources > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M31.5 26c-.731 0-1.409.226-1.971.609l-2.003-2.003c.297-.465.474-1.013.474-1.606 0-.43-.094-.836-.256-1.206l3.204-2.349c.427.342.962.555 1.552.555 1.381 0 2.5-1.119 2.5-2.5S33.881 15 32.5 15 30 16.119 30 17.5c0 .318.065.62.174.899l-3.207 2.352C26.439 20.289 25.756 20 25 20c-.068 0-.132.016-.199.02l-.998-3.396C24.518 16.185 25 15.402 25 14.5c0-1.381-1.119-2.5-2.5-2.5S20 13.119 20 14.5s1.119 2.5 2.5 2.5c.019 0 .037-.005.056-.006l.998 3.392c-.517.287-.936.717-1.208 1.242l-4.347-1.144C17.99 19.111 16.876 18 15.5 18c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5c.927 0 1.727-.51 2.159-1.26l4.353 1.146c-.002.039-.012.075-.012.114 0 .593.177 1.141.474 1.606l-3.149 3.149C18.668 27.285 17.869 27 17 27c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4c0-.869-.285-1.668-.756-2.324l3.149-3.149c.466.296 1.015.473 1.607.473s1.141-.177 1.606-.474l2.003 2.003c-.383.562-.609 1.24-.609 1.971 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5-1.567-3.5-3.5-3.5z"/></svg>');
+}
+/* line 54, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#messages > a, #sideBarTools .sideBarBlock .menuList li#messages > .active, #sideBarTools .sideBarBlock .menuList li#messages > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M24 28L12 16h24L24 28zm0 2l-5-5-7 7h24l-7-7-5 5zm6-6l6 6V18l-6 6zm-18-6v12l6-6-6-6z"/></svg>');
+}
+/* line 57, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#offers > a, #sideBarTools .sideBarBlock .menuList li#offers > .active, #sideBarTools .sideBarBlock .menuList li#offers > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M14 28h8v8h-8v-8zm12 8h8v-8h-8v8zm10-18.375v2.958c0 .275-.225.417-.5.417H34v3h-8v-7h-4v7h-8v-3h-1.5c-.275 0-.5-.142-.5-.417v-2.958c0-.275.225-.625.5-.625h1.596c-.094 0 .712-3.795.769-4.037.343-1.227 1.591-1.994 2.836-1.644.548.154 1.113.489 1.632.726 1.247.568 2.495 1.138 3.742 1.707.316.183.584.425.796.708.212-.283.479-.524.794-.705 1.198-.548 2.397-1.096 3.596-1.644.494-.226.983-.479 1.482-.689 1.313-.555 2.764.183 3.142 1.543.054.242.859 4.035.76 4.035H35.5c.275 0 .5.35.5.625zm-14.174-1.028l-4.605-2.765-.632 2.887c-.034.121.05.281.164.281h4.938l.135-.403zm9.562.108l-.63-2.907-4.608 2.788.131.414h4.927c.122 0 .215-.17.18-.295z"/><path fill="%23FFF" d="M34 28h-8v8h-4v-8h-8v-4h8v-7h4v7h8v4z" opacity=".3"/></svg>');
+}
+/* line 60, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#statistics > a, #sideBarTools .sideBarBlock .menuList li#statistics > .active, #sideBarTools .sideBarBlock .menuList li#statistics > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M12.871 24.035c0-6.162 5.023-11.157 11.185-11.157 3.081 0 5.851 1.249 7.871 3.268L24 24.035v11.157c-6 0-11.129-4.996-11.129-11.157z"/><path fill="%23FFF" d="M26.044 24.035l7.888-7.89c4.357 4.357 4.358 11.422 0 15.778l-7.888-7.888z" opacity=".3"/><path fill="%23FFF" d="M25 24.965v11.156c3 0 5.711-1.09 7.89-3.268L25 24.965z" opacity=".5"/></svg>');
+}
+/* line 63, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#campaigns > a, #sideBarTools .sideBarBlock .menuList li#campaigns > .active, #sideBarTools .sideBarBlock .menuList li#campaigns > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M19.251 24.5h1.619c.241 1.518 1.545 2.681 3.131 2.681 1.757 0 3.181-1.424 3.181-3.181 0-1.586-1.163-2.889-2.681-3.131V19.25c2.413.253 4.3 2.27 4.3 4.75 0 2.651-2.149 4.8-4.8 4.8-2.481 0-4.497-1.887-4.75-4.3zM24 14.106c-1.824 0-3.527.502-4.994 1.364l1.853 1.854c.732-.345 1.525-.58 2.364-.667L24.5 15.38v1.261c3.844.258 6.885 3.45 6.885 7.36 0 4.079-3.307 7.385-7.385 7.385-3.91 0-7.102-3.041-7.36-6.885h-1.261l1.277-1.277c.088-.839.322-1.632.667-2.364l-1.854-1.853c-.861 1.467-1.363 3.17-1.363 4.994 0 5.464 4.43 9.894 9.894 9.894s9.894-4.43 9.894-9.894-4.43-9.895-9.894-9.895zm-3.707 7.601L19 23h4v-4l-1.293 1.293L16.415 15 15 16.415l5.293 5.292zM25 24c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"/></svg>');
+}
+/* line 69, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#settings > a, #sideBarTools .sideBarBlock .menuList li#settings > .active, #sideBarTools .sideBarBlock .menuList li#settings > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M35.794 25.491c.065-.505.11-1.016.11-1.539 0-.523-.045-1.034-.11-1.539l-3.157-.79c-.205-.767-.507-1.494-.896-2.167l1.673-2.787c-.63-.817-1.361-1.549-2.179-2.179l-2.787 1.673c-.673-.389-1.399-.69-2.167-.895l-.79-3.157c-.505-.066-1.015-.111-1.539-.111-.523 0-1.034.045-1.539.11l-.79 3.157c-.767.205-1.493.507-2.165.895l-2.788-1.674c-.817.63-1.549 1.361-2.179 2.179l1.673 2.787c-.39.673-.691 1.399-.896 2.168l-3.157.79c-.066.506-.111 1.017-.111 1.54 0 .523.045 1.034.11 1.539l3.157.79c.205.767.507 1.495.896 2.167l-1.674 2.787c.63.817 1.361 1.549 2.179 2.179l2.787-1.673c.673.389 1.399.69 2.167.896l.79 3.157c.505.066 1.016.11 1.539.11.524 0 1.034-.045 1.539-.11l.79-3.157c.769-.206 1.495-.507 2.168-.896l2.788 1.673c.816-.63 1.548-1.361 2.178-2.179l-1.674-2.787c.389-.673.69-1.399.896-2.166l3.158-.791zm-11.842 2.642c-2.309 0-4.181-1.872-4.181-4.181s1.872-4.181 4.181-4.181 4.181 1.872 4.181 4.181-1.872 4.181-4.181 4.181z"/></svg>');
+}
+/* line 72, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#tools > a, #sideBarTools .sideBarBlock .menuList li#tools > .active, #sideBarTools .sideBarBlock .menuList li#tools > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M27.859 25.845l6.42 5.879c.207.185.213.496.02.692l-3.504 3.502c-.195.195-.508.188-.693-.017l-5.768-6.36 3.525-3.696zM15.28 19.518c.277-.013.664.136.861.33l2.997 2.956 1.918-1.797L18 17.992c-.197-.193-.348-.577-.336-.855l.023-.518c.012-.277-.166-.627-.398-.776l-2.84-1.841c-.231-.151-.58-.114-.775.081l-1.438 1.437c-.195.195-.232.546-.082.777l1.832 2.842c.15.233.5.412.777.399l.517-.02zm20.298-1.492l-4.828 2.432L27.969 16l4.975-2.657c-1.933-1.376-4.003-1.227-5.885-.168-2.468 1.39-3.556 4.263-2.712 6.843L12.829 31.535c-.389.389-.389 1.025 0 1.414l2.122 2.121c.389.389 1.025.389 1.414 0l1.415-1.414 10.039-10.04c1.534.547 3.301.428 4.861-.448 1.881-1.058 3.071-2.772 2.898-5.142z"/></svg>');
+}
+/* line 75, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#support > a, #sideBarTools .sideBarBlock .menuList li#support > .active, #sideBarTools .sideBarBlock .menuList li#support > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23FFF" d="M35 30.169c-.644-.366-4.843-2.851-7-3.724v-2.503c.624-.456 1-1.158 1-2.223v-1.648c1.19-.456 1.978-.989 1.978-1.193 0-.41-.242-.878-.539-.878h-1.126l-1.462-6.676c.035-.323-.166-.404-.447-.301l-2.393.755c-.281.103-.742.099-1.023-.006l-2.393-.681c-.281-.103-.484.003-.449.328L19.688 18H18.56c-.297 0-.539.468-.539.878 0 .204.789.737 1.979 1.193v1.648c0 1.075.376 1.779 1 2.233v2.492c-2.032.873-6.356 3.357-7 3.724-.801.455-1 .888-1 1.941V34.5c0 .275.225.5.5.5h22c.275 0 .5-.225.5-.5v-2.391c0-1.052-.199-1.485-1-1.94z"/></svg>');
+}
+/* line 79, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#sbs > a, #sideBarTools .sideBarBlock .menuList li#sbs > .active, #sideBarTools .sideBarBlock .menuList li#sbs > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.775 19.185"><path fill="%23fff" fill-rule="evenodd" d="M.743 15.348h8.416a1.92 1.92 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.913 1.913 0 0 0-1.354-.564h-3.4a5.741 5.741 0 0 1-4.072-1.69A5.752 5.752 0 0 1 5.755 0h3.668v3.837H5.629a1.918 1.918 0 0 0-1.36 3.271h.007a1.913 1.913 0 0 0 1.352.565h3.53a5.739 5.739 0 0 1 4.066 1.689v.008a5.788 5.788 0 0 1 1.357 2.141h4.925a1.913 1.913 0 0 1 1.354.564 1.922 1.922 0 0 1-1.357 3.276h-4.919a5.776 5.776 0 0 1-1.358 2.149h-.007a5.733 5.733 0 0 1-4.059 1.689H.743z"/><path fill="%23fff" fill-rule="evenodd" d="M25.086 15.348h2.934a1.922 1.922 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.912 1.912 0 0 0-1.353-.564h-3.529a5.741 5.741 0 0 1-4.065-1.69 5.814 5.814 0 0 1-1.361-2.144h-5.951v-3.84h5.952a5.782 5.782 0 0 1 1.359-2.148A5.74 5.74 0 0 1 24.495 0h7.361v3.837h-7.361a1.907 1.907 0 0 0-1.353.558V4.4a1.911 1.911 0 0 0-.007 2.707h.007a1.914 1.914 0 0 0 1.353.565h3.525a5.739 5.739 0 0 1 4.066 1.689v.009a5.731 5.731 0 0 1 0 8.126h-.007a5.731 5.731 0 0 1-4.059 1.689h-8.359a5.776 5.776 0 0 0 5.425-3.837z"/></svg>');
+  background-size: 25px auto;
+  background-position: 10px 50%;
+}
+/* line 84, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li#sbs > a:hover, #sideBarTools .sideBarBlock .menuList li#sbs > .active:hover, #sideBarTools .sideBarBlock .menuList li#sbs > span:hover {
+  background-position: 6px 50%;
+}
+/* line 89, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li a {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 45px;
+  padding-right: 20px;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #c5d0d3;
+  text-decoration: none;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  background-position: 2px 50%;
+}
+/* line 108, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li a:hover {
+  border-left: 4px solid #73eafe;
+  padding-left: 41px;
+  background-position: -2px 50%;
+  background-color: #252b32;
+}
+/* line 117, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .active, #sideBarTools .sideBarBlock .menuList li span {
+  display: block;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  background-position: -2px 50%;
+  color: #fff;
+  border-left: 4px solid #73eafe;
+  padding-left: 45px;
+  background-color: #252b32;
+  background-position: -2px 50%;
+  box-shadow: inset 0px 1px 0px 0px #1a2026, inset 0px -1px 0px 0px #343c44;
+}
+/* line 145, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuOpen {
+  position: relative;
+}
+/* line 148, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuOpen.open + ul {
+  display: block;
+}
+/* line 152, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuOpen::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  border-bottom: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  opacity: 0;
+  transform-origin: 60% 60%;
+  transform: rotate(45deg);
+  transition: transform 100ms ease-in-out, opacity 100ms ease-in-out 100ms;
+}
+/* line 171, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuOpen.open::after {
+  transform: rotate(225deg);
+}
+/* line 178, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList {
+  margin-left: -40px;
+  overflow: hidden;
+  display: none;
+  transition: all 300ms ease-in-out;
+}
+/* line 185, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li {
+  margin: 0;
+}
+/* line 188, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li#account > a, #sideBarTools .sideBarBlock .menuList li .subMenuList li#account > .active, #sideBarTools .sideBarBlock .menuList li .subMenuList li#account > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23999" d="M35 33.148V35.5c0 .275-.225.5-.5.5h-22c-.275 0-.5-.225-.5-.5v-2.352c0-1.053.199-1.485 1-1.94.644-.366 4.968-2.851 7-3.724v-3.767c-.624-.454-1-1.158-1-2.233V18.5c0-2.475 1.5-4.5 4.5-4.5s4.5 2.025 4.5 4.5v2.984c0 1.064-.376 1.767-1 2.223v3.777c2.157.873 6.356 3.357 7 3.724.801.455 1 .888 1 1.94zM37.8 15h-1.86l1.206-1.097c.078-.079.078-.153 0-.231l-.848-.82c-.079-.079-.106-.065-.187.014L35 14.091v-1.872c0-.111-.29-.219-.4-.219h-1.2c-.11 0-.4.108-.4.219v1.865l-1.107-1.206c-.078-.079-.158-.079-.236 0l-.822.847c-.08.078-.067.099.013.178L32.065 15H30.2c-.11 0-.2.309-.2.419v1.199c0 .111.09.382.2.382h1.872l-1.213 1.121c-.078.078-.078.162 0 .242l.848.823c.079.078.109.067.187-.011L33 17.958v1.86c0 .111.29.182.4.182h1.2c.11 0 .4-.071.4-.182v-1.865l1.109 1.209c.08.079.158.079.237 0l.821-.847c.078-.078.066-.117-.012-.196L35.935 17H37.8c.11 0 .2-.271.2-.382v-1.199c0-.11-.09-.419-.2-.419z"/></svg>');
+}
+/* line 191, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li#billing > a, #sideBarTools .sideBarBlock .menuList li .subMenuList li#billing > .active, #sideBarTools .sideBarBlock .menuList li .subMenuList li#billing > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23999" d="M31.641 14c-3.038 0-5.5 2.462-5.5 5.5s2.462 5.5 5.5 5.5 5.5-2.462 5.5-5.5-2.463-5.5-5.5-5.5zm1.459 4.1h-1.797l1.352 1.004c.014.008.445.302.445.896 0 .583-.432 1.047-1 1.096V22.1h-1.2v-1h-1v-1.2h1.8l-1.448-1.086c-.005 0-.353-.172-.353-.814 0-.607.508-1.042 1-1.095V15.9h1.2v1h1v1.2z"/><path fill="%23999" d="M14 29h6v3h-6z" opacity=".3"/><path fill="%23999" d="M31.641 26.341c-2.048 0-3.884-.91-5.139-2.341H12v9c0 .55.45 1 1 1h21c.55 0 1-.45 1-1v-7.548c-.994.563-2.138.889-3.359.889zM20 32h-6v-3h6v3zm5.046-10.708c-1.874-.234-3.409-1.543-3.984-3.292H13c-.55 0-1 .45-1 1v3h13.28c-.091-.23-.168-.466-.234-.708zM24.8 19.5c0-2.371 1.215-4.464 3.053-5.692-.605-.497-1.368-.808-2.212-.808-1.933 0-3.5 1.567-3.5 3.5 0 1.649 1.144 3.022 2.679 3.393-.008-.131-.02-.26-.02-.393z"/></svg>');
+}
+/* line 194, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li#personalManager > a, #sideBarTools .sideBarBlock .menuList li .subMenuList li#personalManager > .active, #sideBarTools .sideBarBlock .menuList li .subMenuList li#personalManager > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23999" d="M34.936 27.137c.068.248-.064.354-.29.234l-3.445-1.806c-1.067.329-2.247.515-3.49.515-4.767 0-8.632-2.689-8.632-6.007 0-3.318 3.865-6.008 8.632-6.008 4.768 0 8.633 2.689 8.633 6.008 0 1.551-.851 2.958-2.236 4.024l.828 3.04zm-7.506.771c-5.705 0-10.173-3.299-10.173-7.512 0-.649.119-1.275.319-1.872-3.237.894-5.528 3.089-5.528 5.66 0 1.572.863 3.001 2.267 4.081l-.84 3.082c-.068.251.064.357.294.236l3.494-1.83c1.083.334 2.278.522 3.539.522 2.821 0 5.321-.934 6.92-2.376-.098.003-.194.009-.292.009z"/></svg>');
+}
+/* line 197, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li#faq > a, #sideBarTools .sideBarBlock .menuList li .subMenuList li#faq > .active, #sideBarTools .sideBarBlock .menuList li .subMenuList li#faq > span {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23999" d="M24 11.75c-6.765 0-12.25 5.484-12.25 12.25S17.235 36.25 24 36.25 36.25 30.766 36.25 24 30.765 11.75 24 11.75zm-1 5.75c0-.275.225-.5.5-.5h2c.275 0 .5.225.5.5v2c0 .275-.225.5-.5.5h-2c-.275 0-.5-.225-.5-.5v-2zm5 13c0 .275-.225.5-.5.5h-6c-.275 0-.5-.225-.5-.5v-2c0-.275.225-.5.5-.5H23v-4h-1.5c-.275 0-.5-.225-.5-.5v-2c0-.275.225-.5.5-.5h4c.275 0 .5.225.5.5V28h1.5c.275 0 .5.225.5.5v2z"/></svg>');
+}
+/* line 201, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li a {
+  padding-left: 60px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #a8afb1;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  background-position: 9px 50%;
+}
+/* line 213, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li a:hover {
+  padding-left: 56px;
+  background-color: #252b32;
+  background-position: 5px 50%;
+}
+/* line 220, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li .subMenuList li .active, #sideBarTools .sideBarBlock .menuList li .subMenuList li span {
+  display: block;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  background-position: 5px 50%;
+  border-left: 4px solid #73eafe;
+  padding-left: 56px;
+  background-color: #252b32;
+  box-shadow: inset 0px 1px 0px 0px #1a2026, inset 0px -1px 0px 0px #343c44;
+}
+/* line 248, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li.spacer {
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 253, /home/karkleo/sbs/app/assets/stylesheets/_sideBarTools.scss */
+#sideBarTools .sideBarBlock .menuList li.spacer::before {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Light-19720b9f01dab32e5154f931defbf5f3fd7e36186b32560bb058eb1e6634e641.woff2) format("woff2"), url(/assets/DINPro-Light-1e367dd7cab948b21c322a737c2dbf2ced8eaff3c8c049a643733c07b1598de7.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Medium-343a3afde5df659d79dd1baf2565487590e385ae8b1ff714b30feed64e5773eb.woff2) format("woff2"), url(/assets/DINPro-Medium-a97dc41f8b4ca6d85f0f75a7901f1e6292514b4d6a19296d786446adc37e0f31.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Bold-9ae897234572e60e462abb4385cf3ba5ff7ea938c6c115ba1d63ca543504176a.woff2) format("woff2"), url(/assets/DINPro-Bold-5f849b8add0211f03ecba7611fc3f0c6baeecb77cd73488fc7094ebb70996d01.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* line 7, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #4b5a77;
+}
+/* line 14, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText_large {
+  font-size: 20px;
+}
+/* line 18, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText_title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* line 24, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText_link:hover {
+  color: #14ccec;
+}
+/* line 29, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText_controlLine {
+  line-height: 40px;
+}
+/* line 33, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText_bold {
+  font-weight: 700;
+}
+/* line 37, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.labelText_right {
+  text-align: right;
+}
+
+/* line 43, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.errorText {
+  color: #ff627c;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* line 49, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 0px 0px white;
+  border: 1px solid #d9e0e5;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  font-size: 18px;
+  font-family: 'DIN Pro';
+  color: #848d9f;
+  line-height: 40px;
+}
+/* line 64, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input::-webkit-input-placeholder {
+  color: #9da8bd;
+}
+/* line 65, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input::-moz-placeholder {
+  color: #9da8bd;
+}
+/* line 66, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input:-moz-placeholder {
+  color: #9da8bd;
+}
+/* line 67, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input:-ms-input-placeholder {
+  color: #9da8bd;
+}
+/* line 74, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input:hover {
+  border: 1px solid #a262ee;
+}
+/* line 78, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input:focus {
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+}
+/* line 84, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_error {
+  border-color: #ff627c;
+}
+/* line 88, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_disabled, .input[disabled] {
+  background-color: #eee;
+  box-shadow: inset 0px 2px 0px 0px rgba(200, 200, 200, 0.3);
+  color: #bebebe;
+}
+/* line 94, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_rightPart {
+  border-radius: 0 20px 20px 0;
+}
+/* line 98, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_long {
+  width: 100%;
+  max-width: 350px;
+}
+/* line 103, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_short {
+  width: 100%;
+  max-width: 160px;
+}
+/* line 108, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_nineSymbols {
+  width: 100%;
+  max-width: 140px;
+}
+/* line 113, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.input_fourSymbols {
+  width: 100%;
+  max-width: 90px;
+}
+
+/* line 119, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon {
+  display: flex;
+}
+/* line 125, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon_combined {
+  display: block;
+  position: relative;
+}
+/* line 129, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon_combined .inputWithIcon__control {
+  padding-right: 35px;
+}
+/* line 133, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon_combined .inputWithIcon__icon {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 40px;
+}
+/* line 142, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon_large .inputWithIcon__control {
+  width: 750px;
+  height: 50px;
+  padding-right: 50px;
+  border-radius: 25px;
+  font-size: 20px;
+  line-height: 50px;
+}
+/* line 153, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon_large .inputWithIcon__icon {
+  width: 50px;
+  height: 50px;
+}
+/* line 160, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 40px;
+  margin: 0 0 0 10px;
+  border: none;
+  background-color: transparent;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: none;
+}
+/* line 176, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  bottom: 11px;
+  right: 5px;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  z-index: 10;
+  transform-origin: 50% 50%;
+  transform: rotate(-45deg) scale(0);
+}
+/* line 193, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  bottom: 5px;
+  right: 1px;
+  background-color: #05c0e1;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  transform-origin: 50% 50%;
+  transform: scale(0);
+}
+/* line 213, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon:active::before, .inputWithIcon__icon:active::after {
+  transform: rotate(-405deg) scale(1);
+}
+/* line 217, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_random {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23cad0d7" d="M15.269 26.919l-2.896.05c-.85-3.333-.285-7.002 1.883-10.001 3.756-5.195 10.906-6.515 16.277-3.005l.06.04 1.479-2.045c.161-.224.36-.19.442.071l1.926 6.208c.082.263-.076.481-.351.486l-6.498.112c-.276.005-.368-.174-.208-.394l1.447-2.002c-4.02-2.584-9.342-1.589-12.143 2.286-1.771 2.449-2.121 5.494-1.221 8.161l-.197.033zm20.334-5.817l-3.098.054c.881 2.656.528 5.683-1.234 8.119-2.801 3.875-8.123 4.87-12.143 2.287l1.447-2.003c.16-.221.068-.4-.208-.394l-6.498.112c-.274.005-.433.224-.351.485l1.927 6.209c.082.262.281.295.442.072l1.479-2.046.06.04c5.371 3.51 12.521 2.19 16.277-3.005 2.154-2.978 2.725-6.617 1.9-9.93z"/></svg>');
+}
+/* line 222, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_random:hover, .inputWithIcon__icon_random:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%2305c0e1" d="M15.269 26.919l-2.896.05c-.85-3.333-.285-7.002 1.883-10.001 3.756-5.195 10.906-6.515 16.277-3.005l.06.04 1.479-2.045c.161-.224.36-.19.442.071l1.926 6.208c.082.263-.076.481-.351.486l-6.498.112c-.276.005-.368-.174-.208-.394l1.447-2.002c-4.02-2.584-9.342-1.589-12.143 2.286-1.771 2.449-2.121 5.494-1.221 8.161l-.197.033zm20.334-5.817l-3.098.054c.881 2.656.528 5.683-1.234 8.119-2.801 3.875-8.123 4.87-12.143 2.287l1.447-2.003c.16-.221.068-.4-.208-.394l-6.498.112c-.274.005-.433.224-.351.485l1.927 6.209c.082.262.281.295.442.072l1.479-2.046.06.04c5.371 3.51 12.521 2.19 16.277-3.005 2.154-2.978 2.725-6.617 1.9-9.93z"/></svg>');
+}
+/* line 227, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_attachments {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23cad0d7"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+/* line 232, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_attachments:hover, .inputWithIcon__icon_attachments:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%2305c0e1"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+/* line 237, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_copy {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440.125 440.125"><g fill="%23cad0d7"><path d="M313.938 187.702L212.563 86.327c-3.079-3.958-7.836-6.37-12.85-6.301-.746.023-1.49.099-2.225.099H55.963c-8.836 0-15.999 7.415-16 16.251v328c.001 8.836 7.164 15.749 16 15.749h248c8.836 0 15.999-6.913 16-15.749v-221.4c.957-5.812-1.358-11.68-6.025-15.274zm-97.975-52.7l49.375 49.124h-49.375v-49.124zm72 273.124h-216v-296h112v85.676c-.843 5.145.873 10.379 4.6 14.025.041.042.083.084.125.125.074.067.149.008.225.074 3.639 3.482 8.706 5.099 13.675 4.099h85.375v192.001z"/><path d="M393.932 107.689L292.557 6.314c-3.02-3.891-7.919-6.376-12.844-6.313-.744.032-1.486.124-2.219.124H135.963c-4.189 0-8.351 1.851-11.313 4.812-2.962 2.962-4.686 7.25-4.687 11.439v43.749h32v-28h112V97.72l38.656 38.405h65.344v192h-28v32h44c4.189 0 8.351-1.599 11.313-4.561 2.962-2.962 4.686-6.999 4.687-11.188V122.971c.934-5.675-1.473-11.775-6.031-15.282zm-97.969-3.563V55.002l49.375 49.124h-49.375z"/></g></svg>');
+}
+/* line 240, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_copy:hover, .inputWithIcon__icon_copy:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440.125 440.125"><g fill="%2305c0e1"><path d="M313.938 187.702L212.563 86.327c-3.079-3.958-7.836-6.37-12.85-6.301-.746.023-1.49.099-2.225.099H55.963c-8.836 0-15.999 7.415-16 16.251v328c.001 8.836 7.164 15.749 16 15.749h248c8.836 0 15.999-6.913 16-15.749v-221.4c.957-5.812-1.358-11.68-6.025-15.274zm-97.975-52.7l49.375 49.124h-49.375v-49.124zm72 273.124h-216v-296h112v85.676c-.843 5.145.873 10.379 4.6 14.025.041.042.083.084.125.125.074.067.149.008.225.074 3.639 3.482 8.706 5.099 13.675 4.099h85.375v192.001z"/><path d="M393.932 107.689L292.557 6.314c-3.02-3.891-7.919-6.376-12.844-6.313-.744.032-1.486.124-2.219.124H135.963c-4.189 0-8.351 1.851-11.313 4.812-2.962 2.962-4.686 7.25-4.687 11.439v43.749h32v-28h112V97.72l38.656 38.405h65.344v192h-28v32h44c4.189 0 8.351-1.599 11.313-4.561 2.962-2.962 4.686-6.999 4.687-11.188V122.971c.934-5.675-1.473-11.775-6.031-15.282zm-97.969-3.563V55.002l49.375 49.124h-49.375z"/></g></svg>');
+}
+/* line 245, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_search {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23cad0d7" d="M35.602 32.755l-5.878-5.879c.956-1.481 1.521-3.24 1.521-5.132 0-5.235-4.262-9.494-9.496-9.494-5.236 0-9.494 4.259-9.494 9.494 0 5.236 4.258 9.495 9.494 9.495 1.891 0 3.649-.562 5.132-1.519l5.878 5.878c.195.196.518.196.712 0l2.132-2.132c.196-.195.196-.515-.001-.711zM15.269 21.744c0-3.571 2.906-6.479 6.479-6.479s6.479 2.907 6.479 6.479c0 3.573-2.905 6.479-6.479 6.479-3.572.001-6.479-2.906-6.479-6.479z"/></svg>');
+}
+/* line 248, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.inputWithIcon__icon_search:hover, .inputWithIcon__icon_search:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%2305c0e1" d="M35.602 32.755l-5.878-5.879c.956-1.481 1.521-3.24 1.521-5.132 0-5.235-4.262-9.494-9.496-9.494-5.236 0-9.494 4.259-9.494 9.494 0 5.236 4.258 9.495 9.494 9.495 1.891 0 3.649-.562 5.132-1.519l5.878 5.878c.195.196.518.196.712 0l2.132-2.132c.196-.195.196-.515-.001-.711zM15.269 21.744c0-3.571 2.906-6.479 6.479-6.479s6.479 2.907 6.479 6.479c0 3.573-2.905 6.479-6.479 6.479-3.572.001-6.479-2.906-6.479-6.479z"/></svg>');
+}
+
+/* line 255, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea {
+  display: block;
+  width: 100%;
+  height: 132px;
+  padding: 5px 15px;
+  resize: none;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 0px 0px white;
+  border: 1px solid #d9e0e5;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  font-size: 18px;
+  font-family: 'DIN Pro';
+  color: #848d9f;
+  line-height: 30px;
+}
+/* line 270, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea::-webkit-input-placeholder {
+  color: #9da8bd;
+}
+/* line 271, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea::-moz-placeholder {
+  color: #9da8bd;
+}
+/* line 272, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea:-moz-placeholder {
+  color: #9da8bd;
+}
+/* line 273, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea:-ms-input-placeholder {
+  color: #9da8bd;
+}
+/* line 280, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea:hover {
+  border: 1px solid #a262ee;
+}
+/* line 284, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea:focus {
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+}
+/* line 290, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea_error {
+  border-color: #ff627c;
+}
+/* line 294, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea_disabled, .textarea[disabled] {
+  background-color: #eee;
+  box-shadow: inset 0px 2px 0px 0px rgba(200, 200, 200, 0.3);
+  color: #bebebe;
+}
+/* line 300, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textarea_heightX2 {
+  height: 124px;
+}
+
+/* line 305, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select {
+  position: relative;
+  width: 100%;
+}
+/* line 309, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__insertion {
+  display: block;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 20px;
+  height: 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 500;
+  text-decoration: none;
+  line-height: 40px;
+  color: #848d9f;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #fcfcfd;
+  border: 1px solid #d9e0e5;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 2px #f9fafe;
+  box-sizing: border-box;
+}
+/* line 332, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__insertion::before {
+  content: "";
+  display: inline-block;
+  line-height: 40px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 525;
+  border: 6px solid transparent;
+  border-top: 8px solid #14ccec;
+  transform-origin: 50% 30%;
+  transition: all 200ms ease-in-out;
+}
+/* line 348, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__insertion:hover {
+  border: 1px solid #a262ee;
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+}
+/* line 355, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__insertion_leftPart {
+  border-radius: 20px 0 0 20px;
+}
+/* line 360, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__trigger {
+  pointer-events: none;
+}
+/* line 363, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__trigger::before {
+  content: "";
+  display: inline-block;
+  line-height: 40px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 525;
+  border: 6px solid transparent;
+  border-top: 8px solid #14ccec;
+  transform-origin: 50% 30%;
+  transition: all 200ms ease-in-out;
+}
+/* line 380, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectList {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 55px 16px 25px;
+  margin: 0;
+  overflow: visible;
+  height: auto;
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  background-color: #fcfcfd;
+  border: 1px solid #d9e0e5;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+  box-sizing: border-box;
+  transform-origin: 50% 0%;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+/* line 396, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectList::-webkit-scrollbar {
+  width: 0;
+}
+/* line 412, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption {
+  list-style: none;
+  padding: 0 5px 0 25px;
+  text-indent: -25px;
+  margin: 0 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #6c8299;
+  line-height: 20px;
+}
+/* line 425, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption:last-child {
+  margin: 0;
+}
+/* line 429, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption::before {
+  content: "";
+  display: inline-block;
+  line-height: 20px;
+  margin-right: 9px;
+  border: 7px solid transparent;
+  border-left: 9px solid #99acc1;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+/* line 442, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption:hover {
+  color: #14ccec;
+}
+/* line 445, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption:hover::before {
+  opacity: 1;
+}
+/* line 450, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_active {
+  color: #14ccec;
+}
+/* line 453, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_active::before {
+  opacity: 1;
+}
+/* line 457, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_active a {
+  color: #14ccec;
+}
+/* line 460, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_active a::before {
+  opacity: 1;
+}
+/* line 466, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_visible {
+  display: block;
+}
+/* line 472, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_withLink::before {
+  display: none;
+}
+/* line 476, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_withLink a {
+  display: block;
+  width: 100%;
+  color: #6c8299;
+  text-decoration: none;
+}
+/* line 482, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_withLink a::before {
+  content: "";
+  display: inline-block;
+  line-height: 20px;
+  margin-right: 9px;
+  border: 7px solid transparent;
+  border-left: 9px solid #99acc1;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+/* line 495, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_withLink a:hover {
+  color: #14ccec;
+}
+/* line 498, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select__selectOption_withLink a:hover::before {
+  opacity: 1;
+}
+/* line 508, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_open, .select.openList {
+  z-index: 1000;
+}
+/* line 511, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_open .select__insertion::before, .select_open .select__trigger::before, .select.openList .select__insertion::before, .select.openList .select__trigger::before {
+  transform: scaleY(-1);
+  border-top: 8px solid #99acc1;
+}
+/* line 516, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_open .select__selectList, .select.openList .select__selectList {
+  transform: scaleY(1);
+  opacity: 1;
+}
+/* line 522, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_long {
+  width: 375px;
+}
+/* line 525, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_lessLong {
+  width: 290px;
+}
+/* line 528, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_middle {
+  width: 230px;
+}
+/* line 531, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_short {
+  width: 160px;
+}
+/* line 534, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_veryShort {
+  width: 90px;
+}
+/* line 539, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_withFilter .select__selectOption {
+  display: none;
+}
+/* line 545, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_languageTabs .select__insertion {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px 5px 0 0;
+}
+/* line 549, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_languageTabs .select__insertion::before {
+  line-height: 30px;
+  top: 11px;
+}
+/* line 555, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_languageTabs .select__trigger::before {
+  line-height: 30px;
+  top: 11px;
+}
+/* line 560, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_languageTabs .inputFilter {
+  font-size: 16px;
+}
+/* line 564, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.select_languageTabs .select__selectList {
+  padding: 45px 16px 16px;
+  border-radius: 5px;
+}
+
+/* line 571, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.selectWithInput {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 575, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.selectWithInput__select {
+  width: 240px;
+}
+
+/* line 582, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton {
+  text-align: center;
+}
+/* line 585, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton__item {
+  width: auto;
+  display: inline-block;
+  margin: 0 20px;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 593, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton__label {
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 300;
+}
+/* line 599, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton__radio {
+  display: none;
+}
+/* line 603, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton__radio:checked ~ .radiobutton__radioIcon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><defs><filter id="b" color-interpolation-filters="sRGB"><feFlood flood-color="%234fbe64" flood-opacity=".8" result="flood"/><feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation="1.5"/><feOffset dy="1" result="offset"/><feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/><feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/><feFlood flood-color="%2352c144" flood-opacity=".890196" result="flood"/><feComposite in="flood" in2="fbSourceGraphic" operator="out" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation=".5"/><feOffset dy="-1" result="offset"/><feComposite in="offset" in2="fbSourceGraphic" operator="atop" result="composite2"/></filter></defs><linearGradient id="a" x1="2.1237" x2="27.8762" y1="15" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="%233dd83e"/><stop offset="1" stop-color="%233dd83e"/></linearGradient><path fill="url(%23a)" d="M27 11.1L14.3 23.8c-.9.9-2.2 1.1-3.3.6-.6-.1-1.2-.4-1.6-.8L3 17.3c-1.2-1.2-1.2-3.1 0-4.2l.7-.7c1.2-1.2 3.1-1.2 4.2 0l4 4L22 6.2c1.2-1.2 3.1-1.2 4.2 0l.8.7c1.2 1.1 1.2 3 0 4.2z" filter="url(%23b)"/></svg>');
+}
+/* line 606, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton__radio:checked + .radiobutton__label {
+  color: #4b5a77;
+  font-weight: 700;
+}
+/* line 611, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.radiobutton__radioIcon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+/* line 626, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkbox {
+  width: auto;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+/* line 633, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkbox__checkbox {
+  display: none;
+}
+/* line 637, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkbox__checkbox:checked ~ .checkbox__checkboxIcon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><defs><filter id="b" color-interpolation-filters="sRGB"><feFlood flood-color="%234fbe64" flood-opacity=".8" result="flood"/><feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation="1.5"/><feOffset dy="1" result="offset"/><feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/><feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/><feFlood flood-color="%2352c144" flood-opacity=".890196" result="flood"/><feComposite in="flood" in2="fbSourceGraphic" operator="out" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation=".5"/><feOffset dy="-1" result="offset"/><feComposite in="offset" in2="fbSourceGraphic" operator="atop" result="composite2"/></filter></defs><linearGradient id="a" x1="2.1237" x2="27.8762" y1="15" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="%233dd83e"/><stop offset="1" stop-color="%233dd83e"/></linearGradient><path fill="url(%23a)" d="M27 11.1L14.3 23.8c-.9.9-2.2 1.1-3.3.6-.6-.1-1.2-.4-1.6-.8L3 17.3c-1.2-1.2-1.2-3.1 0-4.2l.7-.7c1.2-1.2 3.1-1.2 4.2 0l4 4L22 6.2c1.2-1.2 3.1-1.2 4.2 0l.8.7c1.2 1.1 1.2 3 0 4.2z" filter="url(%23b)"/></svg>');
+}
+/* line 640, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkbox__checkbox:checked ~ .checkbox__label {
+  color: #4b5a77;
+  font-weight: 700;
+}
+/* line 645, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkbox__checkboxIcon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 300;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+/* line 661, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkbox__label {
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 300;
+}
+
+/* line 669, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxText {
+  padding: 10px 7px;
+  cursor: pointer;
+}
+/* line 677, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxText_block {
+  display: block;
+  width: auto;
+}
+/* line 682, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxText__checkbox {
+  display: none;
+}
+/* line 686, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxText__checkbox:checked + .checkboxText__label {
+  font-weight: 700;
+  color: #4e50cf;
+}
+/* line 691, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxText__label {
+  line-height: 20px;
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 300;
+}
+
+/* line 702, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon {
+  width: auto;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+/* line 709, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox {
+  display: none;
+}
+/* line 713, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+/* line 724, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon_desktop {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299" d="M12 14h24v14H12z" opacity=".3"/><path fill="%236c8299" d="M37 12H11c-.55 0-1 .45-1 1v17c0 .55.45 1 1 1h11v1c0 2-1.953 2-1.953 2h-3.692c-.195 0-.355.16-.355.354V36h16v-1.646c0-.194-.16-.354-.355-.354H28s-2 0-2-2v-1h11c.55 0 1-.45 1-1V13c0-.55-.45-1-1-1zm-1 18h-1v-1h1v1zm0-2H12V14h24v14z"/></svg>');
+}
+/* line 727, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox:checked + .checkboxIcon__checkboxIcon_desktop {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M12 14h24v14H12z" opacity=".3"/><path fill="%23ffc107" d="M37 12H11c-.55 0-1 .45-1 1v17c0 .55.45 1 1 1h11v1c0 2-1.953 2-1.953 2h-3.692c-.195 0-.355.16-.355.354V36h16v-1.646c0-.194-.16-.354-.355-.354H28s-2 0-2-2v-1h11c.55 0 1-.45 1-1V13c0-.55-.45-1-1-1zm-1 18h-1v-1h1v1zm0-2H12V14h24v14z"/></svg>');
+}
+/* line 731, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon_tablet {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299" d="M33 10H15c-1.1 0-2 .9-2 2v23c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-9 26.675c-.649 0-1.175-.526-1.175-1.175s.526-1.175 1.175-1.175 1.175.526 1.175 1.175-.526 1.175-1.175 1.175zM32 34H16V13h16v21z"/><path fill="%236c8299" d="M32 34H16V13h16z" opacity=".3"/></svg>');
+}
+/* line 734, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox:checked + .checkboxIcon__checkboxIcon_tablet {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M33 10H15c-1.1 0-2 .9-2 2v23c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-9 26.675c-.649 0-1.175-.526-1.175-1.175s.526-1.175 1.175-1.175 1.175.526 1.175 1.175-.526 1.175-1.175 1.175zM32 34H16V13h16v21z"/><path fill="%23ffc107" d="M32 34H16V13h16z" opacity=".3"/></svg>');
+}
+/* line 738, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon_phone {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299" d="M19 16h10v15H19z" opacity=".3"/><path fill="%236c8299" d="M28.5 12h-9c-1.375 0-2.5 1.125-2.5 2.5v19c0 1.375 1.125 2.5 2.5 2.5h9c1.375 0 2.5-1.125 2.5-2.5v-19c0-1.375-1.125-2.5-2.5-2.5zM24 35.271c-.979 0-1.772-.793-1.772-1.771s.793-1.771 1.772-1.771c.978 0 1.771.793 1.771 1.771s-.793 1.771-1.771 1.771zM19 31V16h10v15H19z"/></svg>');
+}
+/* line 741, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox:checked + .checkboxIcon__checkboxIcon_phone {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M19 16h10v15H19z" opacity=".3"/><path fill="%23ffc107" d="M28.5 12h-9c-1.375 0-2.5 1.125-2.5 2.5v19c0 1.375 1.125 2.5 2.5 2.5h9c1.375 0 2.5-1.125 2.5-2.5v-19c0-1.375-1.125-2.5-2.5-2.5zM24 35.271c-.979 0-1.772-.793-1.772-1.771s.793-1.771 1.772-1.771c.978 0 1.771.793 1.771 1.771s-.793 1.771-1.771 1.771zM19 31V16h10v15H19z"/></svg>');
+}
+/* line 745, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon_al {
+  width: auto;
+  height: auto;
+  line-height: 16px;
+  display: inline-block;
+  margin: 5px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #6c8299;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+/* line 757, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox:checked + .checkboxIcon__checkboxIcon_al {
+  background-color: #ff627c;
+}
+/* line 761, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon_attachments {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+/* line 765, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox:checked + .checkboxIcon__checkboxIcon_attachments {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+/* line 769, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkboxIcon_letters {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M24 28L12 16h24L24 28zm0 2l-5-5-7 7h24l-7-7-5 5zm6-6l6 6V18l-6 6zm-18-6v12l6-6-6-6z"/></svg>');
+}
+/* line 773, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.checkboxIcon__checkbox:checked + .checkboxIcon__checkboxIcon_letters {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299" d="M12 20h2l7 7h6l7-7h2L24 8zm7 7l-7-7v14zm10 0l7 7V20zm-9 1l-8 8h24l-8-8z"/></svg>');
+}
+
+/* line 777, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.alertTag {
+  display: inline-block;
+  margin: 5px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #ff627c;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+/* line 787, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tag {
+  display: inline-block;
+  height: 18px;
+  padding: 0 0 0 8px;
+  margin: 2.5px 2.5px;
+  line-height: 18px;
+  white-space: nowrap;
+  background-color: #d4edda;
+  border-radius: 5px;
+}
+/* line 800, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tag_noDelete {
+  padding: 0 8px;
+}
+/* line 803, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tag_noDelete > .tag__delete {
+  display: none;
+}
+/* line 808, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tag__delete {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(50, 50, 50, 0.2)" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+}
+/* line 821, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tag__label {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(50, 50, 50, 0.8);
+  vertical-align: top;
+}
+
+/* line 830, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekButton {
+  display: inline-block;
+  height: 30px;
+  padding: 0 5px;
+  margin: 2px;
+  background-color: rgba(157, 168, 189, 0.4);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 30px;
+  color: rgba(50, 50, 50, 0.8);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* line 845, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekList {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin: 0 -2px;
+}
+/* line 851, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekList__day {
+  margin: 0 2px;
+}
+
+/* line 855, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+/* line 860, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay__button {
+  cursor: pointer;
+}
+/* line 863, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay__checkbox {
+  display: none;
+}
+/* line 866, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay__checkbox:checked ~ .weekDay__label {
+  background-color: #ffc107;
+}
+/* line 869, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay__label {
+  display: inline-block;
+  height: 30px;
+  padding: 0 5px;
+  margin: 2px;
+  background-color: #9da8bd66;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 30px;
+  color: rgba(50, 50, 50, 0.8);
+  vertical-align: top;
+  white-space: nowrap;
+}
+/* line 885, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay__timeButton {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%239da8bd66" d="M24 12c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm0 21c-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9-4.029 9-9 9zm1-10.723v-4.762c0-.275-.242-.515-.517-.515h-.982c-.274 0-.5.24-.5.516L23 22.277c-.3.175-.548.423-.723.723H19.5c-.275 0-.5.273-.5.548v.952c0 .275.225.5.5.5h2.777c.346.595.984 1 1.723 1 1.105 0 2-.896 2-2 0-.738-.405-1.376-1-1.723z"/></svg>');
+}
+/* line 898, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.weekDay__timeButton_active {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%234e50cf" d="M24 12c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm0 21c-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9-4.029 9-9 9zm1-10.723v-4.762c0-.275-.242-.515-.517-.515h-.982c-.274 0-.5.24-.5.516L23 22.277c-.3.175-.548.423-.723.723H19.5c-.275 0-.5.273-.5.548v.952c0 .275.225.5.5.5h2.777c.346.595.984 1 1.723 1 1.105 0 2-.896 2-2 0-.738-.405-1.376-1-1.723z"/></svg>');
+}
+
+/* line 908, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeForm {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 700px;
+  margin-left: -350px;
+  padding-top: 8px;
+  z-index: 1300;
+}
+/* line 917, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeForm__content {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #d9e0e5;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+  color: #6c8299;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* line 933, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeForm__arrow {
+  position: absolute;
+  left: 342px;
+  top: 0;
+  z-index: 1550;
+}
+/* line 939, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeForm__arrow::before, .timeForm__arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent;
+  border-style: solid;
+}
+/* line 948, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeForm__arrow::before {
+  top: 0;
+  border-bottom-color: #d9e0e5;
+}
+/* line 952, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeForm__arrow::after {
+  top: 1px;
+  border-bottom-color: #fff;
+}
+
+/* line 960, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__timeLine {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0 14px;
+}
+/* line 966, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__button {
+  cursor: pointer;
+  margin: 1px;
+}
+/* line 970, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__checkbox {
+  display: none;
+}
+/* line 973, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__checkbox:checked ~ .timeSelector__timeSlot {
+  background-color: #4e50cf;
+}
+/* line 976, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__timeSlot {
+  width: 12px;
+  height: 30px;
+  background-color: #9da8bd66;
+  border-radius: 2px;
+}
+/* line 982, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__labelLine {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+/* line 987, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__label {
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 300;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  width: 28px;
+  position: relative;
+}
+/* line 998, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.timeSelector__label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 35px;
+  top: -30px;
+  left: 13px;
+  background-color: rgba(157, 169, 190, 0.2);
+}
+
+/* line 1012, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.separateBlock {
+  border: 1px solid #d9e0e5;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* line 1019, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  vertical-align: middle;
+  line-height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+/* line 1030, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_desktop {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M12 14h24v14H12z" opacity=".3"/><path fill="%23ffc107" d="M37 12H11c-.55 0-1 .45-1 1v17c0 .55.45 1 1 1h11v1c0 2-1.953 2-1.953 2h-3.692c-.195 0-.355.16-.355.354V36h16v-1.646c0-.194-.16-.354-.355-.354H28s-2 0-2-2v-1h11c.55 0 1-.45 1-1V13c0-.55-.45-1-1-1zm-1 18h-1v-1h1v1zm0-2H12V14h24v14z"/></svg>');
+}
+/* line 1034, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_tablet {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M33 10H15c-1.1 0-2 .9-2 2v23c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-9 26.675c-.649 0-1.175-.526-1.175-1.175s.526-1.175 1.175-1.175 1.175.526 1.175 1.175-.526 1.175-1.175 1.175zM32 34H16V13h16v21z"/><path fill="%23ffc107" d="M32 34H16V13h16z" opacity=".3"/></svg>');
+}
+/* line 1038, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_phone {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M19 16h10v15H19z" opacity=".3"/><path fill="%23ffc107" d="M28.5 12h-9c-1.375 0-2.5 1.125-2.5 2.5v19c0 1.375 1.125 2.5 2.5 2.5h9c1.375 0 2.5-1.125 2.5-2.5v-19c0-1.375-1.125-2.5-2.5-2.5zM24 35.271c-.979 0-1.772-.793-1.772-1.771s.793-1.771 1.772-1.771c.978 0 1.771.793 1.771 1.771s-.793 1.771-1.771 1.771zM19 31V16h10v15H19z"/></svg>');
+}
+/* line 1042, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_check {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><defs><filter id="a" color-interpolation-filters="sRGB"><feFlood flood-color="%2372808D" flood-opacity="1" result="flood"/><feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation=".5"/><feOffset dy="1" result="offset"/><feComposite in="offset" in2="SourceGraphic" operator="atop" result="composite2"/></filter></defs><path fill="%23cad0d7" d="M27 11.1L14.3 23.8c-.9.9-2.2 1.1-3.3.6-.6-.1-1.2-.4-1.6-.8L3 17.3c-1.2-1.2-1.2-3.1 0-4.2l.7-.7c1.2-1.2 3.1-1.2 4.2 0l4 4L22 6.2c1.2-1.2 3.1-1.2 4.2 0l.8.7c1.2 1.1 1.2 3 0 4.2z" filter="url(%23a)"/></svg>');
+}
+/* line 1049, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_check_true {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><defs><filter id="b" color-interpolation-filters="sRGB"><feFlood flood-color="%234fbe64" flood-opacity=".8" result="flood"/><feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation="1.5"/><feOffset dy="1" result="offset"/><feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/><feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/><feFlood flood-color="%2352c144" flood-opacity=".890196" result="flood"/><feComposite in="flood" in2="fbSourceGraphic" operator="out" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation=".5"/><feOffset dy="-1" result="offset"/><feComposite in="offset" in2="fbSourceGraphic" operator="atop" result="composite2"/></filter></defs><linearGradient id="a" x1="2.1237" x2="27.8762" y1="15" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="%233dd83e"/><stop offset="1" stop-color="%233dd83e"/></linearGradient><path fill="url(%23a)" d="M27 11.1L14.3 23.8c-.9.9-2.2 1.1-3.3.6-.6-.1-1.2-.4-1.6-.8L3 17.3c-1.2-1.2-1.2-3.1 0-4.2l.7-.7c1.2-1.2 3.1-1.2 4.2 0l4 4L22 6.2c1.2-1.2 3.1-1.2 4.2 0l.8.7c1.2 1.1 1.2 3 0 4.2z" filter="url(%23b)"/></svg>');
+}
+/* line 1054, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_attachments {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+/* line 1059, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_letterOpen {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299" d="M12 20h2l7 7h6l7-7h2L24 8zm7 7l-7-7v14zm10 0l7 7V20zm-9 1l-8 8h24l-8-8z"/></svg>');
+}
+/* line 1063, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoIcon_letterClose {
+  width: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23ffc107" d="M24 28L12 16h24L24 28zm0 2l-5-5-7 7h24l-7-7-5 5zm6-6l6 6V18l-6 6zm-18-6v12l6-6-6-6z"/></svg>');
+}
+
+/* line 1070, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock {
+  display: inline-block;
+  position: relative;
+  z-index: 1500;
+  vertical-align: middle;
+  cursor: help;
+}
+/* line 1077, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock:hover .infoBlock__alert {
+  display: block;
+}
+/* line 1079, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__icon {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%239da8bd" d="M24 11.75c-6.765 0-12.25 5.484-12.25 12.25S17.235 36.25 24 36.25 36.25 30.766 36.25 24 30.765 11.75 24 11.75zm-1 5.75c0-.275.225-.5.5-.5h2c.275 0 .5.225.5.5v2c0 .275-.225.5-.5.5h-2c-.275 0-.5-.225-.5-.5v-2zm5 13c0 .275-.225.5-.5.5h-6c-.275 0-.5-.225-.5-.5v-2c0-.275.225-.5.5-.5H23v-4h-1.5c-.275 0-.5-.225-.5-.5v-2c0-.275.225-.5.5-.5h4c.275 0 .5.225.5.5V28h1.5c.275 0 .5.225.5.5v2z"/></svg>');
+}
+/* line 1089, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__alert {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 33px;
+  max-width: 275px;
+  width: 100vw;
+  padding-left: 8px;
+}
+/* line 1099, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__content {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #d9e0e5;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+  color: #6c8299;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* line 1115, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__arrow {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  z-index: 1550;
+}
+/* line 1121, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__arrow::before, .infoBlock__arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent;
+  border-style: solid;
+}
+/* line 1130, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__arrow::before {
+  left: 0;
+  border-right-color: #d9e0e5;
+}
+/* line 1134, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.infoBlock__arrow::after {
+  left: 1px;
+  border-right-color: #fff;
+}
+
+/* line 1141, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.siteTypes {
+  display: block;
+}
+/* line 1144, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.siteTypes__type {
+  display: inline-block;
+  margin: 5px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* line 1152, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  padding: 0 20px;
+  white-space: nowrap;
+  font-family: 'DIN Pro';
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  line-height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #14c3e2 0%, #0db8d7 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 1px 3px 0px #b6c5d3;
+}
+/* line 1174, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button:hover {
+  color: #fff;
+  background: linear-gradient(to bottom, #12d0f2 0%, #0ec3e3 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 3px 7px 0px #b6c5d3;
+}
+/* line 1181, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button:focus {
+  background: linear-gradient(to bottom, #12d0f2 0%, #0ec3e3 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 3px 7px 0px #b6c5d3;
+  outline: none;
+}
+/* line 1188, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button:active {
+  background: linear-gradient(to top, #14c3e2 0%, #0db8d7 100%);
+  box-shadow: inset 0 1px 0px #1a9db5, inset 0px -1px 3px #b6c5d3;
+}
+/* line 1195, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_disabled, .button[disabled] {
+  background: linear-gradient(to bottom, #c2c2c2 0%, #b9b9b9 100%);
+  box-shadow: inset 0 -1px 0px rgba(181, 181, 181, 0.8), 0px 1px 3px 0px #d4d4d4;
+}
+/* line 1202, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_large {
+  display: block;
+  width: 290px;
+  height: 70px;
+  margin: auto;
+  border-radius: 35px;
+  font-size: 20px;
+  line-height: 70px;
+  font-weight: 300;
+}
+/* line 1216, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_w80 {
+  display: block;
+  width: 80px;
+  box-sizing: content-box;
+  text-align: center;
+}
+/* line 1224, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_lite {
+  background: linear-gradient(to bottom, #dedede 0%, #d3d3d3 100%);
+  box-shadow: inset 0 -1px 0px #aeaeae, 0px 1px 3px 0px #b6c5d3;
+}
+/* line 1231, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_lite:hover {
+  background: linear-gradient(to bottom, #e8e8e8 0%, #dcdcdc 100%);
+  box-shadow: inset 0 -1px 0px #b0b0b0, 0px 3px 7px 0px #b6c5d3;
+}
+/* line 1237, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_lite:focus {
+  background: linear-gradient(to bottom, #e8e8e8 0%, #dcdcdc 100%);
+  box-shadow: inset 0 -1px 0px #b0b0b0, 0px 3px 7px 0px #e3e3e3;
+}
+/* line 1243, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_lite:active {
+  background: linear-gradient(to bottom, #dedede 0%, #d3d3d3 100%);
+  box-shadow: inset 0 1px 0px #b0b0b0, inset 0px -1px 3px #e3e3e3;
+}
+/* line 1251, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon {
+  padding: 0 20px 0 5px;
+}
+/* line 1254, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: contain;
+}
+/* line 1268, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon.button_withIcon_onlyIcon {
+  padding: 0 2px;
+}
+/* line 1273, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_add::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M24 11.75c-6.765 0-12.25 5.483-12.25 12.25S17.235 36.25 24 36.25 36.25 30.767 36.25 24 30.765 11.75 24 11.75zm7.086 13.769c0 .278-.227.506-.506.506h-4.555v4.618c0 .279-.227.507-.506.507h-3.037c-.279 0-.506-.228-.506-.507v-4.618H17.42c-.279 0-.506-.228-.506-.506v-3.037c0-.278.227-.506.506-.506h4.555v-4.555c0-.279.228-.507.506-.507h3.037c.279 0 .506.227.506.507v4.555h4.555c.279 0 .506.228.506.506v3.037z"/></svg>');
+}
+/* line 1277, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_download::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M33 29v2h-8.427l7.37-8.588c.159-.205.077-.412-.182-.412H27v-9.511c0-.26-.196-.489-.455-.489h-5.024c-.259 0-.521.229-.521.489V22h-4.681c-.26 0-.343.208-.184.413L23.507 31H15v-2h-3v6c0 .55.45 1 1 1h22c.55 0 1-.45 1-1v-6h-3z"/></svg>');
+}
+/* line 1281, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_full::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M36 12v7h-2v-5h-5v-2h7zm-22 7v-5h5v-2h-7v7h2zm20 10v5h-5v2h7v-7h-2zm-20 0h-2v7h7v-2h-5v-5z"/><path fill="%23fff" d="M29.56 20.56l2.086 2.086c.195.195.354.129.354-.146v-6c0-.275-.225-.5-.5-.5h-6c-.275 0-.341.159-.147.354l2.086 2.086-3.438 3.438-3.44-3.439 2.085-2.085c.195-.195.129-.354-.146-.354h-6c-.275 0-.5.225-.5.5v6c0 .275.159.341.353.146l2.087-2.087 3.439 3.439-3.44 3.441-2.086-2.086c-.194-.194-.353-.128-.353.147v6c0 .275.225.5.5.5h6c.275 0 .341-.159.146-.354L20.56 29.56l3.441-3.44 3.439 3.44-2.087 2.087c-.194.194-.128.353.147.353h6c.275 0 .5-.225.5-.5v-6c0-.275-.159-.341-.354-.146l-2.085 2.085L26.122 24l3.438-3.44z"/></svg>');
+}
+/* line 1285, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_mail::before {
+  background-position: 50% 50% !important;
+  background-size: 60% auto !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><path fill="%23fff" fill-rule="evenodd" d="M18.331-.001H1.669C.747-.001 0 .78 0 1.743v11.515c0 .963.747 1.744 1.669 1.744h16.662c.922 0 1.669-.781 1.669-1.744V1.743c0-.963-.747-1.744-1.669-1.744zm.909 14.2c-.124.131-.323.136-.454.018l-5.882-6.376-2.383 2.463c-.282.293-.737.293-1.019 0L7.12 7.841l-5.894 6.388c-.14.127-.35.11-.47-.035-.115-.14-.106-.348.018-.476L6.27 6.962.774 1.278C.642 1.142.641.921.771.785c.124-.132.323-.137.455-.019l8.786 7.926L18.786.779c.139-.127.349-.11.47.035.115.14.105.348-.018.476l-5.485 5.672 5.485 6.744c.131.136.132.356.002.493z"/></svg>');
+}
+/* line 1293, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_log::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 548.3 548.3"><path fill="%23fff" d="M400.7 227.6h-7.9v-37.9c0-.2 0-.5-.1-.7 0-1.5-.5-3-1.5-4.2l-63.1-72h-.1c-.4-.4-.8-.8-1.3-1.1-.1-.1-.3-.2-.4-.3-.4-.2-.8-.4-1.3-.5-.1 0-.2-.1-.3-.1-.5-.1-1-.2-1.5-.2h-155c-7.1 0-12.8 5.8-12.8 12.8v104.2h-7.9c-10.1 0-18.3 8.2-18.3 18.3v95.4c0 10.1 8.2 18.3 18.3 18.3h7.9v65.3c0 7.1 5.8 12.8 12.8 12.8H380c7.1 0 12.8-5.8 12.8-12.8v-65.3h7.9c10.1 0 18.3-8.2 18.3-18.3V246c0-10.2-8.2-18.4-18.3-18.4zM168.3 123.4h148.6V189c0 3.5 2.9 6.4 6.4 6.4H380v32.1H168.3V123.4zm131.9 168.2c0 28.5-17.3 45.8-42.7 45.8-25.8 0-40.9-19.5-40.9-44.2 0-26.1 16.6-45.5 42.3-45.5 26.7-.1 41.3 19.9 41.3 43.9zM159.6 336v-86.9h19.7v70.4h34.6V336h-54.3zM380 421.4H168.3v-61.8H380v61.8zm5.7-89.4c-6.1 2.1-17.5 4.9-29 4.9-15.9 0-27.3-4-35.3-11.7-8-7.5-12.4-18.8-12.2-31.6.1-28.9 21.1-45.4 49.7-45.4 11.2 0 19.9 2.2 24.1 4.3l-4.1 15.7c-4.8-2.1-10.7-3.7-20.3-3.7-16.4 0-28.8 9.3-28.8 28.1 0 17.9 11.2 28.5 27.3 28.5 4.5 0 8.1-.5 9.7-1.3v-18.2h-13.4v-15.3h32.4l-.1 45.7z"/><path fill="%23fff" d="M237.4 292.8c0 17 8 29 21.2 29 13.3 0 20.9-12.6 20.9-29.5 0-15.6-7.5-29-21-29-13.4-.1-21.1 12.6-21.1 29.5z"/></svg>');
+}
+/* line 1297, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_converions::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M34.936 27.137c.068.248-.064.354-.29.234l-3.445-1.806c-1.067.329-2.247.515-3.49.515-4.767 0-8.632-2.689-8.632-6.007 0-3.318 3.865-6.008 8.632-6.008 4.768 0 8.633 2.689 8.633 6.008 0 1.551-.851 2.958-2.236 4.024l.828 3.04zm-7.506.771c-5.705 0-10.173-3.299-10.173-7.512 0-.649.119-1.275.319-1.872-3.237.894-5.528 3.089-5.528 5.66 0 1.572.863 3.001 2.267 4.081l-.84 3.082c-.068.251.064.357.294.236l3.494-1.83c1.083.334 2.278.522 3.539.522 2.821 0 5.321-.934 6.92-2.376-.098.003-.194.009-.292.009z"/></svg>');
+}
+/* line 1301, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button_withIcon_decline::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M32.662 15.338c-4.784-4.784-12.54-4.784-17.324 0s-4.784 12.54 0 17.324 12.54 4.784 17.324 0c4.783-4.784 4.784-12.54 0-17.324zm-5.127 14.318c-.194.195-.513.195-.707 0L24 26.828l-2.828 2.828c-.194.195-.513.195-.707 0l-2.121-2.121c-.195-.193-.195-.512 0-.707L21.172 24l-2.828-2.828c-.195-.195-.195-.514 0-.707l2.121-2.121c.194-.195.512-.195.707 0L24 21.172l2.828-2.828c.195-.195.513-.195.707 0l2.121 2.121c.195.193.195.512 0 .707L26.828 24l2.828 2.828c.195.195.195.514 0 .707l-2.121 2.121z"/></svg>');
+}
+/* line 1305, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button.button_small {
+  padding: 0 17px;
+  height: 35px;
+  line-height: 35px;
+}
+/* line 1310, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button.button_small.button_withIcon {
+  padding: 0 17px 0 3px;
+}
+/* line 1312, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button.button_small.button_withIcon::before {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+/* line 1317, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button.button_small.button_withIcon.button_withIcon_onlyIcon {
+  padding: 0 1px;
+}
+/* line 1323, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.button.button_invisible {
+  display: none;
+}
+
+/* line 1328, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText {
+  font-size: 16px;
+  color: #6c8299;
+}
+/* line 1332, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_main {
+  display: block;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+}
+/* line 1338, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_main_heightX2 {
+  box-sizing: border-box;
+  height: 124px;
+}
+/* line 1344, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText__link, .contentText a {
+  color: #6c8299;
+  text-decoration-color: rgba(108, 130, 153, 0.3);
+}
+/* line 1348, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText__link:hover, .contentText a:hover {
+  color: #14ccec;
+  text-decoration-color: #14ccec;
+}
+/* line 1353, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText__link_newTab, .contentText a_newTab {
+  line-height: 40px;
+}
+/* line 1356, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText__link_newTab::after, .contentText a_newTab::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  vertical-align: middle;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%2314ccec" d="M31 28.736V30c0 .55-.45 1-1 1H18c-.55 0-1-.45-1-1V18c0-.55.45-1 1-1h3.093c1.007-.834 2.147-1.493 3.356-2H19c-2.205 0-4 1.794-4 4v10c0 2.206 1.795 4 4 4h10c2.205 0 4-1.794 4-4v-1.766l-2 1.502z"/><path fill="%2314ccec" d="M40.277 18.697l-9.868-7.384c-.22-.165-.4-.075-.4.2l.004 3.719c0 .023-.01.043-.013.066v.436c-2.129.169-10.839 1.4-10.968 10.328 1.819-4.33 8.121-4.262 10.968-4.239v.404c.006.031.019.061.019.096l.005 4.178c0 .275.18.365.4.199l9.853-7.402c.221-.166.22-.436 0-.601z"/></svg>');
+}
+/* line 1372, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_lite {
+  font-size: 14px;
+}
+/* line 1376, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_thin {
+  margin: 0 0 35px;
+  font-weight: 300;
+  color: #4b5a77;
+}
+/* line 1382, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_linkWithIcon {
+  display: inline-block;
+  padding-left: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  color: #6c8299;
+  text-decoration: underline;
+  text-decoration-color: rgba(108, 130, 153, 0.3);
+  background-position: 0 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* line 1396, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_linkWithIcon:hover {
+  color: #14ccec;
+  text-decoration-color: #14ccec;
+}
+/* line 1401, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_linkWithIcon_mail {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><path fill="%238398ff" fill-rule="evenodd" d="M18.331-.001H1.669C.747-.001 0 .78 0 1.743v11.515c0 .963.747 1.744 1.669 1.744h16.662c.922 0 1.669-.781 1.669-1.744V1.743c0-.963-.747-1.744-1.669-1.744zm.909 14.2c-.124.131-.323.136-.454.018l-5.882-6.376-2.383 2.463c-.282.293-.737.293-1.019 0L7.12 7.841l-5.894 6.388c-.14.127-.35.11-.47-.035-.115-.14-.106-.348.018-.476L6.27 6.962.774 1.278C.642 1.142.641.921.771.785c.124-.132.323-.137.455-.019l8.786 7.926L18.786.779c.139-.127.349-.11.47.035.115.14.105.348-.018.476l-5.485 5.672 5.485 6.744c.131.136.132.356.002.493z"/></svg>');
+}
+/* line 1403, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_linkWithIcon_attachments {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%236c8299"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+/* line 1406, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentText_linkWithIcon_attachments:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%2305c0e1"  d="M24.082 35.068c-.39 0-.982-.877-1.238-1.133-.096-.096-.096-.258 0-.354 3.388-3.389 6.776-6.777 10.164-10.166 1.076-1.076 1.859-2.324 1.977-3.884.195-2.589-1.56-4.985-4.142-5.451-3.023-.545-4.898 1.549-6.798 3.449-2.209 2.21-4.419 4.42-6.629 6.63-1.523 1.523-4.203 3.412-3.849 5.844.401 2.756 3.819 3.379 5.639 1.56l1.361-1.361c2.167-2.168 4.334-4.335 6.502-6.503 1.137-1.138 2.273-2.274 3.411-3.411 1.363-1.364-.385-3.155-1.731-1.805-.419.36-.792.792-1.183 1.183-1.712 1.713-5.909 5.924-6.307 6.303-.202.191-.662.876-.969.569l-1.04-1.04c-.096-.096-.096-.258 0-.353 1.583-1.579 6.725-6.854 8.04-8.06.917-.84 2.062-1.255 3.221-1.036 2.68.506 3.185 3.85 1.417 5.618l-1.361 1.361c-2.167 2.168-4.335 4.335-6.502 6.503-1.473 1.473-3.075 3.619-4.991 4.552-2.381 1.159-5.389.438-6.794-1.86-1.302-2.129-.817-4.937.917-6.67 3.516-3.517 7.033-7.034 10.549-10.551.695-.694 1.368-1.39 2.218-1.905 2.078-1.261 4.733-1.461 6.95-.44 4.665 2.146 5.298 8.385 1.806 11.877-3.436 3.437-6.872 6.873-10.308 10.31-.087.086-.19.224-.33.224z"/></svg>');
+}
+
+/* line 1411, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.anyError {
+  color: #ff627c !important;
+  font-weight: 500;
+}
+
+/* line 1416, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle {
+  margin: 0 auto 40px;
+  max-width: 25em;
+  font-size: 40px;
+  text-align: center;
+  color: #212938;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* line 1426, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle_h2 {
+  font-size: 30px;
+}
+/* line 1429, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle_h2Left {
+  margin: 0 0 40px;
+  font-size: 30px;
+  text-align: left;
+}
+/* line 1435, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle_h3Uppercase {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+/* line 1441, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle_h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: initial;
+  text-transform: initial;
+  letter-spacing: initial;
+}
+/* line 1451, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle_h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: initial;
+  text-transform: initial;
+  letter-spacing: initial;
+}
+/* line 1461, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle_noOffset {
+  margin: 0;
+}
+/* line 1465, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle__link {
+  color: #212938;
+  text-decoration: none;
+}
+/* line 1469, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentTitle__link:hover {
+  color: #14ccec;
+}
+
+/* line 1475, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.whiteTitle {
+  font-size: 42px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 0 0 40px;
+}
+/* line 1485, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.whiteTitle_subtitle {
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: normal;
+  margin: 0 0 30px;
+}
+
+/* line 1494, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textButton {
+  margin-top: 20px;
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  font-size: 16px;
+  color: #626e85;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 22px;
+  border: 2px solid #626e85;
+  background-color: rgba(230, 232, 235, 0);
+}
+/* line 1512, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textButton:hover {
+  background-color: #e6e8eb;
+}
+
+/* line 1517, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.motivatingButtom {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 2px solid #03adcb;
+}
+/* line 1534, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.motivatingButtom__contentBox {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #03adcb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 1551, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.motivatingButtom__name {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+/* line 1557, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialBlock {
+  padding: 100px;
+  box-sizing: border-box;
+  min-height: 475px;
+  background-image: url(/assets/imageWorkWithUs-ff1a4181b50b3424444d14f55a768ea169302b129a38329cf8fd57645a6793ea.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* line 1571, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+/* line 1577, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table_contentTop .table__cell, .table_contentTop .table__cell {
+  vertical-align: top;
+}
+/* line 1585, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__headerRow {
+  border-bottom: 1px solid rgba(108, 130, 153, 0.3);
+}
+/* line 1589, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__headerCell {
+  padding: 10px;
+  white-space: nowrap;
+}
+/* line 1598, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__row:hover {
+  border-radius: 5px;
+  background-color: #fff;
+}
+/* line 1602, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__row:hover .table__cell {
+  background-color: #fff;
+}
+/* line 1607, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__row:nth-child(2n) {
+  background-color: rgba(181, 196, 211, 0.16);
+}
+/* line 1611, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__row_top {
+  vertical-align: top;
+}
+/* line 1616, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__cell {
+  padding: 10px;
+}
+/* line 1618, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__cell:first-child {
+  border-radius: 5px 0 0 5px;
+}
+/* line 1621, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.table__cell:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+/* line 1627, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.subordinate {
+  display: block;
+  padding: 3px 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(108, 130, 153, 0.3);
+}
+/* line 1634, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.subordinate__active {
+  color: #ff627c;
+}
+/* line 1637, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.subordinate__all {
+  color: #14ccec;
+}
+
+/* line 1643, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar {
+  position: relative;
+  display: block;
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #14ccec;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M35 30.208c-.644-.366-4.843-2.851-7-3.724v-3.777c.624-.456 1-1.158 1-2.223V17.5c0-2.475-1.5-4.5-4.5-4.5S20 15.025 20 17.5v2.984c0 1.075.376 1.779 1 2.233v3.767c-2.032.873-6.356 3.357-7 3.724-.801.455-1 .888-1 1.94V34.5c0 .275.225.5.5.5h22c.275 0 .5-.225.5-.5v-2.352c0-1.052-.199-1.485-1-1.94z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+/* line 1657, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar_large {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  margin: 0 0 30px;
+  border: 6px solid #8398ff;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(97, 114, 195, 0.2), 0px 8px 12px 0px rgba(147, 153, 183, 0.5);
+}
+/* line 1669, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar:hover > .avatar__add {
+  opacity: 1;
+}
+/* line 1671, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar__add {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  height: 35%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M33 29v2h-8.427l7.37-8.588c.159-.205.077-.412-.182-.412H27v-9.511c0-.26-.196-.489-.455-.489h-5.024c-.259 0-.521.229-.521.489V22h-4.681c-.26 0-.343.208-.184.413L23.507 31H15v-2h-3v6c0 .55.45 1 1 1h22c.55 0 1-.45 1-1v-6h-3z"/></svg>');
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+/* line 1690, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar__add:hover {
+  opacity: 1;
+}
+/* line 1693, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar__button {
+  visibility: hidden;
+}
+/* line 1697, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.avatar__image {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1705, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+/* line 1710, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__item {
+  list-style: none;
+  padding: 0;
+}
+/* line 1714, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__item:first-child .pagination__button {
+  border-radius: 20px 0 0 20px;
+}
+/* line 1715, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__item:last-child .pagination__button {
+  border-radius: 0 20px 20px 0;
+}
+/* line 1718, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__button {
+  position: relative;
+  display: block;
+  height: 40px;
+  min-width: 45px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  line-height: 37px;
+  border: 1px solid #d9e0e5;
+  background-color: #fff;
+  text-decoration: none;
+  color: #6c8299;
+  text-align: center;
+}
+/* line 1733, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__button:hover {
+  color: #14ccec;
+  box-shadow: 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+  z-index: 500;
+}
+/* line 1739, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__button:active {
+  box-shadow: inset 0px 2px 4px rgba(182, 197, 211, 0.3);
+}
+/* line 1744, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__button_active {
+  border: 1px solid #a262ee;
+  z-index: 600;
+}
+/* line 1748, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__button_active:hover {
+  color: #6c8299;
+  box-shadow: none;
+  z-index: 600;
+}
+/* line 1755, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.pagination__button_arrows {
+  line-height: 33px;
+}
+
+/* line 1761, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tabs {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+/* line 1769, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tabs__item {
+  list-style: none;
+  padding: 0;
+}
+/* line 1774, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tabs__button {
+  position: relative;
+  display: block;
+  height: 30px;
+  min-width: 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  cursor: pointer;
+  line-height: 30px;
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 500;
+  text-align: center;
+}
+/* line 1790, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tabs__button:hover {
+  color: #4b5a77;
+}
+/* line 1794, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tabs__button_active {
+  font-weight: 700;
+  color: #4b5a77;
+}
+/* line 1799, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.tabs__button_complete {
+  color: #4e50cf;
+}
+
+/* line 1805, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.languageTabs {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 1813, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.languageTabs__item {
+  list-style: none;
+  padding: 0;
+}
+/* line 1818, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.languageTabs__button {
+  position: relative;
+  display: block;
+  height: 30px;
+  min-width: 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  cursor: pointer;
+  line-height: 30px;
+  text-decoration: none;
+  color: #9da8bd;
+  font-weight: 500;
+  text-align: center;
+}
+/* line 1834, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.languageTabs__button:hover {
+  color: #4b5a77;
+}
+/* line 1838, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.languageTabs__button_active {
+  font-weight: 700;
+  color: #4b5a77;
+}
+/* line 1843, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.languageTabs__button_complete {
+  color: #4e50cf;
+}
+
+/* line 1849, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion {
+  width: 100%;
+  border: 1px solid #d9e0e5;
+  border-radius: 5px;
+}
+/* line 1855, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion__label {
+  position: relative;
+  display: block;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  cursor: pointer;
+  line-height: 40px;
+  color: #6c8299;
+  background-color: #fff;
+  border-radius: 4px;
+}
+/* line 1869, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion__label::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 30px;
+  top: 13px;
+  border-bottom: 2px solid #d9e0e5;
+  border-right: 2px solid #d9e0e5;
+  transform-origin: 60% 60%;
+  transform: rotate(45deg);
+  transition: transform 100ms ease-in-out;
+}
+/* line 1886, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion__label.open {
+  border-bottom: 1px solid #d9e0e5;
+  border-radius: 4px 4px 0 0;
+}
+/* line 1890, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion__label.open::after {
+  transform: rotate(225deg);
+}
+/* line 1894, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion__label.open + .accordion__content {
+  display: block;
+}
+/* line 1900, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.accordion__content {
+  display: none;
+  padding: 15px;
+}
+
+/* line 1906, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm {
+  width: 100%;
+  background-color: #e9eff3d2;
+  border-radius: 5px;
+  margin: 0 0 20px;
+}
+/* line 1914, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__optionsBar {
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 1919, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+/* line 1928, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_delete {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%239da8bd" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+}
+/* line 1930, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_delete:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23848d9f" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+}
+/* line 1934, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_copy2 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%239da8bd" d="M26 24v11.5c0 .275-.225.5-.5.5h-13c-.275 0-.5-.225-.5-.5v-17c0-.275.225-.5.5-.5H20v5.5c0 .275.225.5.5.5H26zm-5-6v4.5c0 .275.225.5.5.5H26l-5-5zm9 .5V13h-7.5c-.275 0-.5.225-.5.5v3.586l5 5V31h8.5c.275 0 .5-.225.5-.5V19h-5.5c-.275 0-.5-.225-.5-.5zm1.5-.5H36l-5-5v4.5c0 .275.225.5.5.5z"/></svg>');
+}
+/* line 1936, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_copy2:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23848d9f" d="M26 24v11.5c0 .275-.225.5-.5.5h-13c-.275 0-.5-.225-.5-.5v-17c0-.275.225-.5.5-.5H20v5.5c0 .275.225.5.5.5H26zm-5-6v4.5c0 .275.225.5.5.5H26l-5-5zm9 .5V13h-7.5c-.275 0-.5.225-.5.5v3.586l5 5V31h8.5c.275 0 .5-.225.5-.5V19h-5.5c-.275 0-.5-.225-.5-.5zm1.5-.5H36l-5-5v4.5c0 .275.225.5.5.5z"/></svg>');
+}
+/* line 1940, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_copy3 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%239da8bd" d="M20 24.5V21l4 4h-3.5c-.275 0-.5-.225-.5-.5zm-.5 1.5H24v9.5c0 .275-.225.5-.5.5h-11c-.275 0-.5-.225-.5-.5v-14c0-.275.225-.5.5-.5H19v4.5c0 .275.225.5.5.5zm6.521-9h5.957c.551 0 1.022-.433 1.022-.985v-.982c0-.552-.471-1.033-1.021-1.033H31v-.912c0-.552-.45-1.088-1-1.088h-2c-.55 0-1 .536-1 1.088V14h-.979c-.55 0-1.021.481-1.021 1.033v.982c0 .552.471.985 1.021.985zm.779 11.2H25V31h1.8v-2.8zM35.5 15H34v2.019c0 .551-.45.981-1 .981h-8c-.55 0-1-.43-1-.981V15h-1.5c-.275 0-.5.237-.5.513V21l2.8 2.8h2v-3.79l5.992 5.991-5 4.999H35.5c.275 0 .5-.151.5-.427v-15.06c0-.276-.225-.513-.5-.513zm-4.889 11.001L28 23.389V25h-3v2h3v1.612l2.611-2.611z"/></svg>');
+}
+/* line 1942, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_copy3:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23848d9f" d="M20 24.5V21l4 4h-3.5c-.275 0-.5-.225-.5-.5zm-.5 1.5H24v9.5c0 .275-.225.5-.5.5h-11c-.275 0-.5-.225-.5-.5v-14c0-.275.225-.5.5-.5H19v4.5c0 .275.225.5.5.5zm6.521-9h5.957c.551 0 1.022-.433 1.022-.985v-.982c0-.552-.471-1.033-1.021-1.033H31v-.912c0-.552-.45-1.088-1-1.088h-2c-.55 0-1 .536-1 1.088V14h-.979c-.55 0-1.021.481-1.021 1.033v.982c0 .552.471.985 1.021.985zm.779 11.2H25V31h1.8v-2.8zM35.5 15H34v2.019c0 .551-.45.981-1 .981h-8c-.55 0-1-.43-1-.981V15h-1.5c-.275 0-.5.237-.5.513V21l2.8 2.8h2v-3.79l5.992 5.991-5 4.999H35.5c.275 0 .5-.151.5-.427v-15.06c0-.276-.225-.513-.5-.513zm-4.889 11.001L28 23.389V25h-3v2h3v1.612l2.611-2.611z"/></svg>');
+}
+/* line 1946, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_link {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%239da8bd" d="M32.799 21.854l-2.133 2.132c-.277-.961-.798-1.885-1.559-2.683l1.57-1.571c.562-.56.299-1.519-.266-2.084l-1.641-1.64c-.518-.518-1.358-.79-1.983-.165l-5.245 5.244c-.597.598-.379 1.443.146 1.978v-.001c.009.009.016.019.022.025l2.805 2.805-2.121 2.121-2.805-2.804-.01-.011c-.003-.004-.005-.006-.008-.01-.002-.001-.003-.003-.005-.004-1.778-1.793-1.844-4.521-.145-6.221l5.245-5.244c1.699-1.699 4.435-1.627 6.226.164l1.641 1.641c1.848 1.848 1.965 4.627.266 6.328zm-7.563-2.311c-.004-.005-.01-.009-.014-.013L23.1 21.651c.005.006.01.009.015.014l2.7 2.699c.566.566.827 1.523.266 2.086l-5.244 5.244c-.566.566-1.528.307-2.093-.26l-1.641-1.639c-.533-.533-.758-1.389-.156-1.99l1.559-1.559c-.777-.781-1.302-1.699-1.582-2.661l-2.098 2.098c-1.704 1.704-1.635 4.442.156 6.233l1.64 1.64c1.818 1.817 4.661 1.935 6.336.259l5.245-5.244c1.699-1.699 1.582-4.479-.267-6.328l-2.7-2.7z"/></svg>');
+}
+/* line 1948, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__option_link:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23848d9f" d="M32.799 21.854l-2.133 2.132c-.277-.961-.798-1.885-1.559-2.683l1.57-1.571c.562-.56.299-1.519-.266-2.084l-1.641-1.64c-.518-.518-1.358-.79-1.983-.165l-5.245 5.244c-.597.598-.379 1.443.146 1.978v-.001c.009.009.016.019.022.025l2.805 2.805-2.121 2.121-2.805-2.804-.01-.011c-.003-.004-.005-.006-.008-.01-.002-.001-.003-.003-.005-.004-1.778-1.793-1.844-4.521-.145-6.221l5.245-5.244c1.699-1.699 4.435-1.627 6.226.164l1.641 1.641c1.848 1.848 1.965 4.627.266 6.328zm-7.563-2.311c-.004-.005-.01-.009-.014-.013L23.1 21.651c.005.006.01.009.015.014l2.7 2.699c.566.566.827 1.523.266 2.086l-5.244 5.244c-.566.566-1.528.307-2.093-.26l-1.641-1.639c-.533-.533-.758-1.389-.156-1.99l1.559-1.559c-.777-.781-1.302-1.699-1.582-2.661l-2.098 2.098c-1.704 1.704-1.635 4.442.156 6.233l1.64 1.64c1.818 1.817 4.661 1.935 6.336.259l5.245-5.244c1.699-1.699 1.582-4.479-.267-6.328l-2.7-2.7z"/></svg>');
+}
+/* line 1954, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.specialForm__content {
+  padding: 15px;
+}
+
+/* line 1962, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 16px;
+  position: relative;
+  margin-bottom: 8px;
+}
+/* line 1969, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage_fromMe {
+  justify-content: flex-end;
+}
+/* line 1972, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage_fromMe .chatMessage__content {
+  background-color: #ecf2f4;
+  border-radius: 10px 10px 0 10px;
+  box-shadow: inset 0 2px 2px rgba(249, 250, 254, 0.3), 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+}
+/* line 1980, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage_fromMe .chatMessage__arrow {
+  left: auto;
+  right: 0;
+}
+/* line 1983, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage_fromMe .chatMessage__arrow::before {
+  left: auto;
+  right: 0;
+  border-left: 8px solid #d9e0e5;
+  border-right-color: transparent;
+  box-shadow: -1px 2px 4px -2px rgba(182, 197, 211, 0.3);
+}
+/* line 1991, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage_fromMe .chatMessage__arrow::after {
+  left: auto;
+  right: 2px;
+  border-left: 8px solid #ecf2f4;
+  border-bottom: 8px solid #ecf2f4;
+  border-right-color: transparent;
+}
+/* line 2000, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__arrow {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  z-index: 50;
+}
+/* line 2006, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__arrow::before, .chatMessage__arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+}
+/* line 2012, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__arrow::before {
+  top: 0;
+  left: 0;
+  border-right: 8px solid #d9e0e5;
+  border-bottom: 8px solid #d9e0e5;
+  box-shadow: 1px 2px 4px -1px rgba(182, 197, 211, 0.3);
+}
+/* line 2020, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__arrow::after {
+  top: -1px;
+  left: 2px;
+  border-right: 8px solid #fff;
+  border-bottom: 8px solid #fff;
+}
+/* line 2028, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__content {
+  max-width: 85%;
+  padding: 8px 15px 15px;
+  background-color: #fff;
+  border: 1px solid #d9e0e5;
+  border-radius: 10px 10px 10px 0;
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+}
+/* line 2039, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 4px;
+}
+/* line 2047, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__texts {
+  color: #6c8299;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* line 2053, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__statusBar {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+/* line 2058, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__statusRead {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  opacity: 0.6;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+/* line 2068, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__statusRead_delivered {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.924 144.924"><path fill="%23ffc107" d="M144.924 37.745c0-5.963-2.321-11.567-6.538-15.784-8.518-8.516-22.25-8.675-30.992-.518-.198.161-.39.334-.575.518L53.194 75.587l-15.09-15.09c-8.703-8.701-22.864-8.701-31.567 0C2.321 64.714 0 70.319 0 76.281c0 5.962 2.321 11.566 6.537 15.783l30.834 30.834c.013.013.023.028.037.041 4.217 4.216 9.821 6.537 15.784 6.537 5.218 0 10.161-1.777 14.14-5.047.551-.452 1.082-.936 1.594-1.445.016-.016.034-.029.05-.045l69.411-69.411c.084-.084.158-.176.238-.263 4.058-4.185 6.299-9.676 6.299-15.52zM17.145 71.105c2.854-2.855 7.499-2.855 10.353 0l20.394 20.394c.183.183.374.354.57.515 1.375 1.121 3.055 1.682 4.734 1.682s3.359-.561 4.734-1.682c.196-.16.387-.332.57-.515l58.929-58.93c.001-.001.003-.003.004-.005 2.855-2.847 7.496-2.848 10.348.005 1.383 1.383 2.145 3.221 2.145 5.177 0 1.953-.759 3.789-2.139 5.171-.001.002-.003.003-.005.005L58.37 112.33c-1.383 1.383-3.221 2.145-5.177 2.145-1.955 0-3.793-.762-5.176-2.145L17.145 81.457C15.762 80.074 15 78.237 15 76.281s.762-3.793 2.145-5.176z"/></svg>');
+}
+/* line 2071, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__statusRead_read {
+  width: 25px;
+  background-size: cover;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.864 214.864"><path fill="%23ffc107" d="M208.35 56.943c-8.703-8.7-22.864-8.702-31.567 0l-53.626 53.625-3.414-3.414 18.644-18.644c.183-.183.355-.374.515-.57 8.16-8.74 8.004-22.477-.515-30.996-4.216-4.217-9.82-6.538-15.783-6.538s-11.567 2.321-15.784 6.537l-53.625 53.625-15.091-15.09c-8.703-8.701-22.863-8.701-31.566 0C2.321 99.695 0 105.299 0 111.262c0 5.844 2.241 11.334 6.299 15.52.08.087.153.179.238.263l30.835 30.835c.013.013.023.028.037.041 4.217 4.216 9.821 6.537 15.784 6.537 5.962 0 11.566-2.321 15.783-6.537l.002-.002 19.197-19.197 19.159 19.159c.013.013.023.028.037.041 4.217 4.216 9.821 6.537 15.783 6.537 5.963 0 11.567-2.321 15.784-6.537L208.35 88.51c.183-.183.355-.374.515-.57 8.16-8.74 8.004-22.477-.515-30.997zM17.144 106.086c2.854-2.853 7.499-2.854 10.354 0l20.394 20.394c.183.183.374.354.57.515 1.375 1.121 3.055 1.682 4.734 1.682s3.359-.561 4.734-1.682c.196-.16.387-.332.57-.515l58.929-58.929c1.383-1.383 3.221-2.145 5.177-2.145 1.955 0 3.793.761 5.176 2.145 2.854 2.854 2.854 7.498 0 10.353l-69.408 69.409c-1.383 1.383-3.221 2.145-5.176 2.145-1.956 0-3.794-.762-5.177-2.145l-30.874-30.874c-.002-.002-.004-.003-.005-.005-1.38-1.382-2.139-3.218-2.139-5.171-.003-1.957.759-3.795 2.141-5.177zm91.991 11.676l8.717 8.717c1.465 1.464 3.384 2.196 5.304 2.196 1.919 0 3.839-.732 5.304-2.196l58.93-58.929c2.854-2.856 7.499-2.854 10.353 0s2.854 7.498 0 10.353l-69.409 69.409c-1.383 1.383-3.221 2.145-5.177 2.145-1.955 0-3.793-.762-5.176-2.145l-19.197-19.198 10.351-10.352z"/></svg>');
+}
+/* line 2077, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.chatMessage__date {
+  color: #9da8bd;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* line 2086, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.ticketChanges {
+  margin: 5px 0 5px;
+  padding: 0;
+}
+/* line 2090, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.ticketChanges__item {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 5px;
+}
+/* line 2095, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.ticketChanges__property {
+  color: #4e50cf;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+/* line 2101, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.ticketChanges__description {
+  color: #9da8bd;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* line 2108, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.redirect {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+/* line 2113, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.redirect__description {
+  display: flex;
+  color: #6c8299;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  border-top: 1px solid #d9e0e5;
+  padding-top: 5px;
+}
+/* line 2125, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.redirect__name {
+  font-weight: 500;
+}
+
+/* line 2130, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  width: 160px;
+}
+/* line 2141, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__tab {
+  display: block;
+  padding: 0;
+  margin: 10px 0 0 20px;
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+  background: #9da8bd;
+  border-radius: 5px;
+}
+/* line 2153, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__tab_active {
+  background: #4e50cf;
+}
+/* line 2156, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__tab_partially {
+  background: #ffc107;
+}
+/* line 2159, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__tab_completed {
+  background: #3dd83e;
+}
+/* line 2163, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__tab:first-child {
+  margin-top: 0;
+}
+/* line 2168, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0 0;
+}
+/* line 2176, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-position: 50% 50%;
+}
+/* line 2185, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__icon__general {
+  background-size: 80px 80px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M24 11.75c-6.765 0-12.25 5.484-12.25 12.25S17.235 36.25 24 36.25 36.25 30.766 36.25 24 30.765 11.75 24 11.75zm-1 5.75c0-.275.225-.5.5-.5h2c.275 0 .5.225.5.5v2c0 .275-.225.5-.5.5h-2c-.275 0-.5-.225-.5-.5v-2zm5 13c0 .275-.225.5-.5.5h-6c-.275 0-.5-.225-.5-.5v-2c0-.275.225-.5.5-.5H23v-4h-1.5c-.275 0-.5-.225-.5-.5v-2c0-.275.225-.5.5-.5h4c.275 0 .5.225.5.5V28h1.5c.275 0 .5.225.5.5v2z"/></svg>');
+}
+/* line 2189, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__icon__target {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M19.251 24.5h1.619c.241 1.518 1.545 2.681 3.131 2.681 1.757 0 3.181-1.424 3.181-3.181 0-1.586-1.163-2.889-2.681-3.131V19.25c2.413.253 4.3 2.27 4.3 4.75 0 2.651-2.149 4.8-4.8 4.8-2.481 0-4.497-1.887-4.75-4.3zM24 14.106c-1.824 0-3.527.502-4.994 1.364l1.853 1.854c.732-.345 1.525-.58 2.364-.667L24.5 15.38v1.261c3.844.258 6.885 3.45 6.885 7.36 0 4.079-3.307 7.385-7.385 7.385-3.91 0-7.102-3.041-7.36-6.885h-1.261l1.277-1.277c.088-.839.322-1.632.667-2.364l-1.854-1.853c-.861 1.467-1.363 3.17-1.363 4.994 0 5.464 4.43 9.894 9.894 9.894s9.894-4.43 9.894-9.894-4.43-9.895-9.894-9.895zm-3.707 7.601L19 23h4v-4l-1.293 1.293L16.415 15 15 16.415l5.293 5.292zM25 24c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"/></svg>');
+}
+/* line 2192, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__icon__traffic {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M31.5 26c-.731 0-1.409.226-1.971.609l-2.003-2.003c.297-.465.474-1.013.474-1.606 0-.43-.094-.836-.256-1.206l3.204-2.349c.427.342.962.555 1.552.555 1.381 0 2.5-1.119 2.5-2.5S33.881 15 32.5 15 30 16.119 30 17.5c0 .318.065.62.174.899l-3.207 2.352C26.439 20.289 25.756 20 25 20c-.068 0-.132.016-.199.02l-.998-3.396C24.518 16.185 25 15.402 25 14.5c0-1.381-1.119-2.5-2.5-2.5S20 13.119 20 14.5s1.119 2.5 2.5 2.5c.019 0 .037-.005.056-.006l.998 3.392c-.517.287-.936.717-1.208 1.242l-4.347-1.144C17.99 19.111 16.876 18 15.5 18c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5c.927 0 1.727-.51 2.159-1.26l4.353 1.146c-.002.039-.012.075-.012.114 0 .593.177 1.141.474 1.606l-3.149 3.149C18.668 27.285 17.869 27 17 27c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4c0-.869-.285-1.668-.756-2.324l3.149-3.149c.466.296 1.015.473 1.607.473s1.141-.177 1.606-.474l2.003 2.003c-.383.562-.609 1.24-.609 1.971 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5-1.567-3.5-3.5-3.5z"/></svg>');
+}
+/* line 2195, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__icon__link {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M32.799 21.854l-2.133 2.132c-.277-.961-.798-1.885-1.559-2.683l1.57-1.571c.562-.56.299-1.519-.266-2.084l-1.641-1.64c-.518-.518-1.358-.79-1.983-.165l-5.245 5.244c-.597.598-.379 1.443.146 1.978v-.001c.009.009.016.019.022.025l2.805 2.805-2.121 2.121-2.805-2.804-.01-.011c-.003-.004-.005-.006-.008-.01-.002-.001-.003-.003-.005-.004-1.778-1.793-1.844-4.521-.145-6.221l5.245-5.244c1.699-1.699 4.435-1.627 6.226.164l1.641 1.641c1.848 1.848 1.965 4.627.266 6.328zm-7.563-2.311c-.004-.005-.01-.009-.014-.013L23.1 21.651c.005.006.01.009.015.014l2.7 2.699c.566.566.827 1.523.266 2.086l-5.244 5.244c-.566.566-1.528.307-2.093-.26l-1.641-1.639c-.533-.533-.758-1.389-.156-1.99l1.559-1.559c-.777-.781-1.302-1.699-1.582-2.661l-2.098 2.098c-1.704 1.704-1.635 4.442.156 6.233l1.64 1.64c1.818 1.817 4.661 1.935 6.336.259l5.245-5.244c1.699-1.699 1.582-4.479-.267-6.328l-2.7-2.7z"/></svg>');
+}
+/* line 2198, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__icon__payouts {
+  background-size: contain;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff"  d="M24.4 25.3v3.1c1.1-.1 1.7-.5 1.7-1.5 0-.9-.6-1.3-1.7-1.6zM22 21c0 .6.3.9 1.3 1.3v-2.6c-.7.1-1.3.5-1.3 1.3z"/><path fill="%23fff"  d="M39.3 21.4c-1.8.1-3.2 1.2-3.9 2.7l-3-.6c-.2-2.9-1.9-5.4-4.3-6.8l2.8-4.7c.6.2 1.2.2 1.8.2 2.7-.2 4.7-2.6 4.4-5.3-.2-2.7-2.6-4.7-5.3-4.4-2.7.2-4.7 2.6-4.4 5.3.1 1.1.6 2.1 1.3 2.9l-3.1 5.1c-.5-.1-1.1-.2-1.6-.2-2.1 0-3.9.7-5.4 2l-3.3-2.8c.5-1 .8-2.1.7-3.3 0-.1-.1-.3-.1-.4-.5-3-3.2-5.2-6.3-5-3.2.4-5.6 3.2-5.3 6.5.3 3.2 3 5.6 6.2 5.4h.1c1.2-.1 2.2-.5 3-1.2l3.3 2.7c-.8 1.3-1.3 2.8-1.3 4.5 0 1.5.4 2.9 1.1 4.1l-4 4.7c-.5-.3-1.1-.5-1.7-.6-.5-.1-1-.1-1.5-.1-3.2.3-5.7 3.1-5.4 6.4s3.1 5.7 6.4 5.4c3.2-.3 5.7-3.1 5.4-6.4 0-.6-.2-1.1-.4-1.6s-.5-1-.8-1.5l3.7-4.4c1.5 1.4 3.5 2.2 5.7 2.2h.9l1.6 4.5c-1.4 1-2.2 2.6-2.1 4.4.2 2.7 2.6 4.7 5.3 4.4 2.7-.2 4.7-2.6 4.4-5.3-.2-2.7-2.6-4.6-5.2-4.4l-1.5-4.3c2.4-1 4.2-3.1 4.8-5.7l2.8.6v.1c.2 2.7 2.6 4.7 5.3 4.4 2.7-.2 4.7-2.6 4.4-5.3-.4-2.4-2.8-4.4-5.5-4.2zm-14.9 9.1v.9h-1.1v-.9c-2.2-.3-4-1.9-4-4.2h2.5c0 1.1.6 1.7 1.5 2v-3.4c-.1 0-.2-.1-.3-.1-1.7-.5-3.4-1.2-3.4-3.6 0-2.3 1.8-3.5 3.7-3.8v-.9h1.1v.9c2.3.2 3.9 1.4 3.9 4.2h-2.5c-.1-1.1-.3-1.8-1.5-2v3c.6.1.5.1.8.2.8.2 3.5.8 3.5 3.6.1 2.3-1.3 3.9-4.2 4.1z"/></svg>');
+}
+/* line 2204, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formTabs__status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+/* line 2226, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.columns {
+  column-count: 2;
+  column-gap: 20px;
+}
+/* line 2230, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.columns_X2 {
+  column-gap: 40px;
+}
+/* line 2234, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.columns_3 {
+  column-count: 3;
+}
+
+/* line 2239, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  position: relative;
+}
+/* line 2246, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild_center {
+  text-align: center;
+}
+/* line 2250, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild_errorCenterSecondLine {
+  padding-bottom: 30px;
+}
+/* line 2253, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild_errorCenterSecondLine .formFeild__error {
+  top: 40px;
+  text-align: center;
+}
+/* line 2259, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild__label {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+/* line 2265, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild__label_title {
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 2271, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.formFeild__error {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+/* line 2285, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.listInRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -20px;
+  padding: 0;
+}
+/* line 2293, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.listInRow__listItem {
+  margin: 20px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+/* line 2300, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.listInRow__listItem_2inRow {
+  flex: 1 0 calc(100%/2 - 40px);
+}
+/* line 2304, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.listInRow__listItem_4inRow {
+  flex: 1 0 calc(100%/4 - 40px);
+}
+/* line 2308, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.listInRow__listItem_withMarker {
+  padding: 0 0px 0px 40px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  line-height: 22px;
+  color: #6f7b92;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><defs><filter id="b" color-interpolation-filters="sRGB"><feFlood flood-color="%234fbe64" flood-opacity=".8" result="flood"/><feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation="1.5"/><feOffset dy="1" result="offset"/><feComposite in="SourceGraphic" in2="offset" result="fbSourceGraphic"/><feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/><feFlood flood-color="%2352c144" flood-opacity=".890196" result="flood"/><feComposite in="flood" in2="fbSourceGraphic" operator="out" result="composite1"/><feGaussianBlur in="composite1" result="blur" stdDeviation=".5"/><feOffset dy="-1" result="offset"/><feComposite in="offset" in2="fbSourceGraphic" operator="atop" result="composite2"/></filter></defs><linearGradient id="a" x1="2.1237" x2="27.8762" y1="15" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="%233dd83e"/><stop offset="1" stop-color="%233dd83e"/></linearGradient><path fill="url(%23a)" d="M27 11.1L14.3 23.8c-.9.9-2.2 1.1-3.3.6-.6-.1-1.2-.4-1.6-.8L3 17.3c-1.2-1.2-1.2-3.1 0-4.2l.7-.7c1.2-1.2 3.1-1.2 4.2 0l4 4L22 6.2c1.2-1.2 3.1-1.2 4.2 0l.8.7c1.2 1.1 1.2 3 0 4.2z" filter="url(%23b)"/></svg>');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/* line 2324, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textSection {
+  width: 100%;
+  max-width: 800px;
+  padding: 55px 50px;
+  margin: auto;
+  box-sizing: border-box;
+}
+/* line 2331, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textSection_center {
+  text-align: center;
+}
+/* line 2335, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.textSection_top {
+  padding-top: 0;
+}
+
+/* line 2340, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.imageSection {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 2345, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.imageSection img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 2356, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+/* line 2365, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust > * {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 2369, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust > .adjust {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 2374, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_center {
+  justify-content: center;
+}
+/* line 2377, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_left {
+  justify-content: flex-start;
+}
+/* line 2380, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_right {
+  justify-content: flex-end;
+}
+/* line 2384, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_middle {
+  align-items: center;
+}
+/* line 2388, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_doublet {
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: stretch;
+}
+/* line 2394, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_doublet > * {
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  flex: 1 1 40%;
+}
+/* line 2402, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_noWrap {
+  flex-wrap: nowrap;
+}
+/* line 2406, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_topSpace {
+  margin-top: 20px;
+}
+/* line 2409, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_topSpaceX2 {
+  margin-top: 40px;
+}
+/* line 2413, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_bottomSpace {
+  margin-bottom: 20px;
+}
+/* line 2416, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_bottomSpaceX2 {
+  margin-bottom: 40px;
+}
+/* line 2420, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+/* line 2424, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > * {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 2428, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > .adjust {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 2432, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > .adjust_x2 {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 2437, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > .adjust__column1-3 {
+  flex: 1 0 calc(100%/3 - 40px);
+}
+/* line 2440, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > .adjust__column1-3_2-3 {
+  flex: 1 0 calc(100%/3*2 - 40px);
+}
+/* line 2444, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > .adjust__column1-4 {
+  flex: 1 0 calc(100%/4 - 40px);
+}
+/* line 2448, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust_x2 > .adjust__fullWidth {
+  flex: 2 0 calc(100% - 40px);
+  max-width: calc(100% - 40px);
+}
+/* line 2454, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust__fullWidth {
+  flex: 2 0 100%;
+  max-width: 100%;
+}
+/* line 2459, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust__element {
+  flex-grow: 1;
+}
+/* line 2462, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust__block {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+/* line 2467, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust__column1-3 {
+  flex: 1 0 calc(100%/3 - 20px);
+}
+/* line 2470, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust__column1-3_2-3 {
+  flex: 1 0 calc(100%/3*2 - 20px);
+}
+/* line 2475, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.adjust__column1-4 {
+  flex: 0 0 calc(100%/4 - 20px);
+}
+
+/* line 2481, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentBlock {
+  width: 100%;
+  max-width: 1300px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+/* line 2487, /home/karkleo/sbs/app/assets/stylesheets/_bem.scss */
+.contentBlock_w1000 {
+  max-width: 1000px;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Light-19720b9f01dab32e5154f931defbf5f3fd7e36186b32560bb058eb1e6634e641.woff2) format("woff2"), url(/assets/DINPro-Light-1e367dd7cab948b21c322a737c2dbf2ced8eaff3c8c049a643733c07b1598de7.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Medium-343a3afde5df659d79dd1baf2565487590e385ae8b1ff714b30feed64e5773eb.woff2) format("woff2"), url(/assets/DINPro-Medium-a97dc41f8b4ca6d85f0f75a7901f1e6292514b4d6a19296d786446adc37e0f31.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(/assets/DINPro-Bold-9ae897234572e60e462abb4385cf3ba5ff7ea938c6c115ba1d63ca543504176a.woff2) format("woff2"), url(/assets/DINPro-Bold-5f849b8add0211f03ecba7611fc3f0c6baeecb77cd73488fc7094ebb70996d01.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* line 5, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  padding: 0 20px;
+  font-family: 'DIN Pro';
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  line-height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #14c3e2 0%, #0db8d7 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 1px 3px 0px #b6c5d3;
+}
+/* line 26, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button:hover {
+  color: #fff;
+  background: linear-gradient(to bottom, #12d0f2 0%, #0ec3e3 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 3px 7px 0px #b6c5d3;
+}
+/* line 33, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button:focus {
+  background: linear-gradient(to bottom, #12d0f2 0%, #0ec3e3 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 3px 7px 0px #b6c5d3;
+  outline: none;
+}
+/* line 40, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button:active {
+  background: linear-gradient(to top, #14c3e2 0%, #0db8d7 100%);
+  box-shadow: inset 0 1px 0px #1a9db5, inset 0px -1px 3px #b6c5d3;
+}
+/* line 47, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_disabled, .button[disabled] {
+  background: linear-gradient(to bottom, #c2c2c2 0%, #b9b9b9 100%);
+  box-shadow: inset 0 -1px 0px rgba(181, 181, 181, 0.8), 0px 1px 3px 0px #d4d4d4;
+}
+/* line 54, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_large {
+  display: block;
+  width: 290px;
+  height: 70px;
+  margin: auto;
+  border-radius: 35px;
+  font-size: 20px;
+  line-height: 70px;
+  font-weight: 300;
+}
+/* line 68, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_w80 {
+  display: block;
+  width: 80px;
+  box-sizing: content-box;
+  text-align: center;
+}
+/* line 76, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_lite {
+  background: linear-gradient(to bottom, #dedede 0%, #d3d3d3 100%);
+  box-shadow: inset 0 -1px 0px #aeaeae, 0px 1px 3px 0px #b6c5d3;
+}
+/* line 83, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_lite:hover {
+  background: linear-gradient(to bottom, #e8e8e8 0%, #dcdcdc 100%);
+  box-shadow: inset 0 -1px 0px #b0b0b0, 0px 3px 7px 0px #b6c5d3;
+}
+/* line 89, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_lite:focus {
+  background: linear-gradient(to bottom, #e8e8e8 0%, #dcdcdc 100%);
+  box-shadow: inset 0 -1px 0px #b0b0b0, 0px 3px 7px 0px #e3e3e3;
+}
+/* line 95, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_lite:active {
+  background: linear-gradient(to bottom, #dedede 0%, #d3d3d3 100%);
+  box-shadow: inset 0 1px 0px #b0b0b0, inset 0px -1px 3px #e3e3e3;
+}
+/* line 103, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_withIcon {
+  padding: 0 20px 0 5px;
+}
+/* line 106, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_withIcon::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: contain;
+}
+/* line 121, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_withIcon_add::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M24 11.75c-6.765 0-12.25 5.483-12.25 12.25S17.235 36.25 24 36.25 36.25 30.767 36.25 24 30.765 11.75 24 11.75zm7.086 13.769c0 .278-.227.506-.506.506h-4.555v4.618c0 .279-.227.507-.506.507h-3.037c-.279 0-.506-.228-.506-.507v-4.618H17.42c-.279 0-.506-.228-.506-.506v-3.037c0-.278.227-.506.506-.506h4.555v-4.555c0-.279.228-.507.506-.507h3.037c.279 0 .506.227.506.507v4.555h4.555c.279 0 .506.228.506.506v3.037z"/></svg>');
+}
+/* line 125, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_withIcon_log::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 548.3 548.3"><path fill="%23fff" d="M400.7 227.6h-7.9v-37.9c0-.2 0-.5-.1-.7 0-1.5-.5-3-1.5-4.2l-63.1-72h-.1c-.4-.4-.8-.8-1.3-1.1-.1-.1-.3-.2-.4-.3-.4-.2-.8-.4-1.3-.5-.1 0-.2-.1-.3-.1-.5-.1-1-.2-1.5-.2h-155c-7.1 0-12.8 5.8-12.8 12.8v104.2h-7.9c-10.1 0-18.3 8.2-18.3 18.3v95.4c0 10.1 8.2 18.3 18.3 18.3h7.9v65.3c0 7.1 5.8 12.8 12.8 12.8H380c7.1 0 12.8-5.8 12.8-12.8v-65.3h7.9c10.1 0 18.3-8.2 18.3-18.3V246c0-10.2-8.2-18.4-18.3-18.4zM168.3 123.4h148.6V189c0 3.5 2.9 6.4 6.4 6.4H380v32.1H168.3V123.4zm131.9 168.2c0 28.5-17.3 45.8-42.7 45.8-25.8 0-40.9-19.5-40.9-44.2 0-26.1 16.6-45.5 42.3-45.5 26.7-.1 41.3 19.9 41.3 43.9zM159.6 336v-86.9h19.7v70.4h34.6V336h-54.3zM380 421.4H168.3v-61.8H380v61.8zm5.7-89.4c-6.1 2.1-17.5 4.9-29 4.9-15.9 0-27.3-4-35.3-11.7-8-7.5-12.4-18.8-12.2-31.6.1-28.9 21.1-45.4 49.7-45.4 11.2 0 19.9 2.2 24.1 4.3l-4.1 15.7c-4.8-2.1-10.7-3.7-20.3-3.7-16.4 0-28.8 9.3-28.8 28.1 0 17.9 11.2 28.5 27.3 28.5 4.5 0 8.1-.5 9.7-1.3v-18.2h-13.4v-15.3h32.4l-.1 45.7z"/><path fill="%23fff" d="M237.4 292.8c0 17 8 29 21.2 29 13.3 0 20.9-12.6 20.9-29.5 0-15.6-7.5-29-21-29-13.4-.1-21.1 12.6-21.1 29.5z"/></svg>');
+}
+/* line 129, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.button_withIcon_converions::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23fff" d="M34.936 27.137c.068.248-.064.354-.29.234l-3.445-1.806c-1.067.329-2.247.515-3.49.515-4.767 0-8.632-2.689-8.632-6.007 0-3.318 3.865-6.008 8.632-6.008 4.768 0 8.633 2.689 8.633 6.008 0 1.551-.851 2.958-2.236 4.024l.828 3.04zm-7.506.771c-5.705 0-10.173-3.299-10.173-7.512 0-.649.119-1.275.319-1.872-3.237.894-5.528 3.089-5.528 5.66 0 1.572.863 3.001 2.267 4.081l-.84 3.082c-.068.251.064.357.294.236l3.494-1.83c1.083.334 2.278.522 3.539.522 2.821 0 5.321-.934 6.92-2.376-.098.003-.194.009-.292.009z"/></svg>');
+}
+
+/* line 134, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.overlay {
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(6, 17, 31, 0.6);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* line 152, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 156, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.overlay:target + .modal {
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+/* line 161, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal {
+  visibility: hidden;
+  position: fixed;
+  width: 500px;
+  height: 280px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10500;
+  margin: auto;
+  padding: 25px 45px 35px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  box-shadow: 0px 20px 40px 5px rgba(11, 11, 43, 0.3);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291 299"><defs><path id="a" d="M0 0h291v299H0z"/></defs><clipPath id="c"><use overflow="visible" xlink:href="%23a"/></clipPath><linearGradient id="b" x2="306" y1="149.5" y2="149.5" gradientUnits="userSpaceOnUse"><stop offset=".41" stop-color="%23a262ee"/><stop offset="1" stop-color="%23434ace"/></linearGradient><path fill="url(%23b)" d="M0 299c125.6-6.4 76.8-220.4 143-230 28.4-4.1 35.9 36 61 36 43.4 0 16.8-105 102-105v299H0z" clip-path="url(%23c)" opacity=".48"/><linearGradient id="d" x2="315" y1="156" y2="156" gradientUnits="userSpaceOnUse"><stop offset=".41" stop-color="%23a262ee"/><stop offset="1" stop-color="%23434ace"/></linearGradient><path fill="url(%23d)" d="M0 299c125.6-6.4 84.2-198.3 147-210 21.6-4 34.9 18 60 18 40.2 0 34.8-94 108-94v286H0z" clip-path="url(%23c)"/></svg>');
+  background-position: 100% 100%;
+  background-size: auto 113%;
+  background-repeat: no-repeat;
+  background-color: #f3f5f7;
+  transition: transform 200ms ease-in-out;
+  transform-origin: 50% 50%;
+  transform: scaleY(0);
+}
+/* line 190, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalLogo {
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.775 19.185"><path fill="%23fff" fill-rule="evenodd" d="M.743 15.348h8.416a1.92 1.92 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.913 1.913 0 0 0-1.354-.564h-3.4a5.741 5.741 0 0 1-4.072-1.69A5.752 5.752 0 0 1 5.755 0h3.668v3.837H5.629a1.918 1.918 0 0 0-1.36 3.271h.007a1.913 1.913 0 0 0 1.352.565h3.53a5.739 5.739 0 0 1 4.066 1.689v.008a5.788 5.788 0 0 1 1.357 2.141h4.925a1.913 1.913 0 0 1 1.354.564 1.922 1.922 0 0 1-1.357 3.276h-4.919a5.776 5.776 0 0 1-1.358 2.149h-.007a5.733 5.733 0 0 1-4.059 1.689H.743z"/><path fill="%23fff" fill-rule="evenodd" d="M25.086 15.348h2.934a1.922 1.922 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.912 1.912 0 0 0-1.353-.564h-3.529a5.741 5.741 0 0 1-4.065-1.69 5.814 5.814 0 0 1-1.361-2.144h-5.951v-3.84h5.952a5.782 5.782 0 0 1 1.359-2.148A5.74 5.74 0 0 1 24.495 0h7.361v3.837h-7.361a1.907 1.907 0 0 0-1.353.558V4.4a1.911 1.911 0 0 0-.007 2.707h.007a1.914 1.914 0 0 0 1.353.565h3.525a5.739 5.739 0 0 1 4.066 1.689v.009a5.731 5.731 0 0 1 0 8.126h-.007a5.731 5.731 0 0 1-4.059 1.689h-8.359a5.776 5.776 0 0 0 5.425-3.837z"/></svg>');
+  width: 100px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+/* line 203, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalFormTitle {
+  font-size: 28px;
+  font-weight: 300;
+  color: #090a26;
+  margin: 0 0 5px;
+}
+/* line 211, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal #errorAlertSignIn {
+  color: #ff627c;
+  font-size: 14px;
+  display: block;
+  position: absolute;
+  top: 65px;
+}
+/* line 219, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm {
+  margin-top: 32px;
+}
+/* line 222, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText {
+  display: block;
+  width: 220px;
+  height: 40px;
+  padding: 0 15px 0 35px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  border: 1px solid #c1c4ce;
+  box-shadow: inset 0 2px 2px #f9fafe;
+  outline: none;
+  cursor: pointer;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 35px;
+  color: #92949c;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  background-repeat: no-repeat;
+  background-size: auto 15px;
+  background-position: 13px 50%;
+}
+/* line 241, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText::-webkit-input-placeholder {
+  color: #a1a3ab;
+  font-weight: 500;
+}
+/* line 244, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText::-moz-placeholder {
+  color: #a1a3ab;
+  font-weight: 700;
+}
+/* line 247, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText:-moz-placeholder {
+  color: #a1a3ab;
+  font-weight: 700;
+}
+/* line 250, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText:-ms-input-placeholder {
+  color: #a1a3ab;
+  font-weight: 500;
+}
+/* line 258, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText:hover {
+  border: 1px solid #a262ee;
+}
+/* line 262, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .formInputText:focus {
+  box-shadow: inset 0 2px 2px #f9fafe, 0px 2px 4px 1px rgba(182, 197, 211, 0.3);
+}
+/* line 268, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm #modalFormName {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"><path fill="%23c1c4ce" d="M16 13.47a1.53 1.53 0 0 0-.94-1.47l-3.81-1.57a.93.93 0 0 0-.91-.91v-.36a5.19 5.19 0 0 0 1.33-2.44 1.4 1.4 0 0 0 .53-1.14 1.59 1.59 0 0 0-.2-.73 3.85 3.85 0 0 0 .18-1.13C12.18 1.66 9.62 0 7.55 0a3.72 3.72 0 0 0-3.73 3.72A3.85 3.85 0 0 0 4 4.85a1.59 1.59 0 0 0-.18.74 1.4 1.4 0 0 0 .53 1.14 5.13 5.13 0 0 0 1.34 2.44v.3a.93.93 0 0 0-.94.91L1 12a1.52 1.52 0 0 0-1 1.47v.61a.93.93 0 0 0 .93.92h14.14a.93.93 0 0 0 .93-.92v-.61z"/></svg>');
+}
+/* line 271, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm #modalFormPassword {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16"><path fill="%23c1c4ce" fill-rule="evenodd" d="M11.567 6.368h-.86V3.925c0-2.171-2.306-3.93-4.208-3.93-1.9 0-4.207 1.759-4.207 3.93v2.443h-.861c-.792 0-1.434.733-1.434 1.637v6.363c0 .904.642 1.637 1.434 1.637h10.136c.792 0 1.434-.733 1.434-1.637V8.005c0-.904-.642-1.637-1.434-1.637zM4.013 3.925c0-1.084 1.537-1.965 2.486-1.965.949 0 2.486.881 2.486 1.965v2.443H4.013V3.925zm3.06 7.341v1.819c0 .182-.128.328-.287.328h-.574c-.158 0-.287-.146-.287-.328v-1.819c-.341-.226-.573-.645-.573-1.128 0-.723.514-1.31 1.147-1.31.634 0 1.148.587 1.148 1.31 0 .483-.232.902-.574 1.128z"/></svg>');
+}
+/* line 275, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .forgotPassword, .modal .modalForm .signUp {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7b7c97;
+  text-decoration: none;
+  line-height: 40px;
+}
+/* line 282, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .forgotPassword:hover, .modal .modalForm .signUp:hover {
+  color: #14ccec;
+}
+/* line 286, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .signInButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+/* line 305, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .signInButtons .modalFormSignIn {
+  width: 90px;
+  height: 40px;
+  padding: 0;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #14c3e2 0%, #0db8d7 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 1px 3px 0px #b6c5d3;
+}
+/* line 324, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .signInButtons .modalFormSignIn:hover {
+  background: linear-gradient(to bottom, #12d0f2 0%, #0ec3e3 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 3px 7px 0px #b6c5d3;
+}
+/* line 330, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .modalForm .signInButtons .modalFormSignIn:focus {
+  background: linear-gradient(to bottom, #12d0f2 0%, #0ec3e3 100%);
+  box-shadow: inset 0 -1px 0px rgba(26, 157, 181, 0.8), 0px 3px 7px 0px #b6c5d3;
+  outline: none;
+}
+/* line 341, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .leftPart {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* line 347, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .leftPart .buttonTextLite {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  padding: 0 20px;
+  font-family: 'DIN Pro';
+  font-size: 16px;
+  font-weight: 500;
+  color: #7a58e0;
+  text-decoration: none;
+  line-height: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 20px;
+}
+/* line 364, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .leftPart .buttonTextLite:hover {
+  box-shadow: 0px 3px 7px 0px rgba(38, 38, 38, 0.3);
+}
+/* line 368, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .leftPart .buttonTextLite:focus {
+  box-shadow: 0px 3px 7px 0px rgba(38, 38, 38, 0.3);
+  outline: none;
+}
+/* line 373, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal .leftPart .buttonTextLite:active {
+  box-shadow: inset 0px 3px 7px rgba(38, 38, 38, 0.4);
+}
+/* line 380, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal #signInClose {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(250, 250, 250, 0.8)" d="M32.662 15.338c-4.784-4.784-12.54-4.784-17.324 0s-4.784 12.54 0 17.324 12.54 4.784 17.324 0c4.783-4.784 4.784-12.54 0-17.324zm-5.127 14.318c-.194.195-.513.195-.707 0L24 26.828l-2.828 2.828c-.194.195-.513.195-.707 0l-2.121-2.121c-.195-.193-.195-.512 0-.707L21.172 24l-2.828-2.828c-.195-.195-.195-.514 0-.707l2.121-2.121c.194-.195.512-.195.707 0L24 21.172l2.828-2.828c.195-.195.513-.195.707 0l2.121 2.121c.195.193.195.512 0 .707L26.828 24l2.828 2.828c.195.195.195.514 0 .707l-2.121 2.121z"/></svg>');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+/* line 393, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.modal #signInClose:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(250, 250, 250, 0.4)" d="M32.662 15.338c-4.784-4.784-12.54-4.784-17.324 0s-4.784 12.54 0 17.324 12.54 4.784 17.324 0c4.783-4.784 4.784-12.54 0-17.324zm-5.127 14.318c-.194.195-.513.195-.707 0L24 26.828l-2.828 2.828c-.194.195-.513.195-.707 0l-2.121-2.121c-.195-.193-.195-.512 0-.707L21.172 24l-2.828-2.828c-.195-.195-.195-.514 0-.707l2.121-2.121c.194-.195.512-.195.707 0L24 21.172l2.828-2.828c.195-.195.513-.195.707 0l2.121 2.121c.195.193.195.512 0 .707L26.828 24l2.828 2.828c.195.195.195.514 0 .707l-2.121 2.121z"/></svg>');
+}
+@media screen and (orientation: portrait) {
+  /* line 398, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal #signInClose {
+    width: 45px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(50, 50, 50, 0.3)" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+  }
+  /* line 404, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal #signInClose:hover {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(50, 50, 50, 0.7)" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+  }
+}
+@media screen and (max-width: 1000px) and (max-aspect-ratio: 4 / 3), (orientation: portrait) and (max-width: 1000px) {
+  /* line 161, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal {
+    max-width: 400px;
+    width: 80%;
+    max-height: 500px;
+    min-height: 400px;
+    height: 60%;
+    padding: 35px 90px 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405 258"><linearGradient id="a" x1="1" x2="406" y1="131" y2="131" gradientTransform="matrix(1 0 0 -1 0 260)" gradientUnits="userSpaceOnUse"><stop offset=".41" stop-color="%23a262ee"/><stop offset="1" stop-color="%23434ace"/></linearGradient><path fill="url(%23a)" d="M1 258c166.2-5.5 110.8-197.4 189.3-198.5 38.6-.5 47.5 56.8 80.7 56.8 57.5 0 42.7-110.4 135-116.3v258H1z" opacity=".48"/><linearGradient id="b" x1="1" x2="406" y1="119.5" y2="119.5" gradientTransform="matrix(1 0 0 -1 0 260)" gradientUnits="userSpaceOnUse"><stop offset=".41" stop-color="%23a262ee"/><stop offset="1" stop-color="%23434ace"/></linearGradient><path fill="url(%23b)" d="M1 258c161.5-5.1 118.8-165.7 198-172.1 27.9-2.3 38.8 33.5 71.1 33.5 51.7 0 46.7-90.5 135.9-96.4v235H1z"/></svg>');
+    background-size: 100% auto;
+  }
+  /* line 424, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .modalLogo {
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: 65px;
+    right: 35px;
+    transform: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.775 19.185"><path fill="%23fff" fill-rule="evenodd" d="M.743 15.348h8.416a1.92 1.92 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.913 1.913 0 0 0-1.354-.564h-3.4a5.741 5.741 0 0 1-4.072-1.69A5.752 5.752 0 0 1 5.755 0h3.668v3.837H5.629a1.918 1.918 0 0 0-1.36 3.271h.007a1.913 1.913 0 0 0 1.352.565h3.53a5.739 5.739 0 0 1 4.066 1.689v.008a5.788 5.788 0 0 1 1.357 2.141h4.925a1.913 1.913 0 0 1 1.354.564 1.922 1.922 0 0 1-1.357 3.276h-4.919a5.776 5.776 0 0 1-1.358 2.149h-.007a5.733 5.733 0 0 1-4.059 1.689H.743z"/><path fill="%23fff" fill-rule="evenodd" d="M25.086 15.348h2.934a1.922 1.922 0 0 0 1.357-.562 1.913 1.913 0 0 0 0-2.711 1.912 1.912 0 0 0-1.353-.564h-3.529a5.741 5.741 0 0 1-4.065-1.69 5.814 5.814 0 0 1-1.361-2.144h-5.951v-3.84h5.952a5.782 5.782 0 0 1 1.359-2.148A5.74 5.74 0 0 1 24.495 0h7.361v3.837h-7.361a1.907 1.907 0 0 0-1.353.558V4.4a1.911 1.911 0 0 0-.007 2.707h.007a1.914 1.914 0 0 0 1.353.565h3.525a5.739 5.739 0 0 1 4.066 1.689v.009a5.731 5.731 0 0 1 0 8.126h-.007a5.731 5.731 0 0 1-4.059 1.689h-8.359a5.776 5.776 0 0 0 5.425-3.837z"/></svg>');
+    width: 80px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+  }
+  /* line 439, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .buttonTextLite {
+    transform: translateX(55px);
+  }
+  /* line 443, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .modalFormTitle {
+    text-align: center;
+  }
+  /* line 447, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal #errorAlertSignIn {
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* line 455, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .modalForm .formInputText {
+    min-width: 220px;
+    width: 100%;
+  }
+  /* line 460, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .modalForm .signInButtons {
+    min-width: 220px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px), (max-height: 400px) {
+  /* line 161, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal {
+    max-width: 100vw;
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    min-height: 280px;
+    box-sizing: border-box;
+    border-radius: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px;
+  }
+  /* line 483, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal #errorAlertSignIn {
+    top: 90px;
+    left: 50px;
+    transform: none;
+  }
+}
+@media screen and (max-width: 600px) and (max-height: 280px), screen and (max-height: 400px) and (max-height: 280px) {
+  /* line 161, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal {
+    position: absolute;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: portrait), screen and (max-height: 400px) and (orientation: portrait) {
+  /* line 161, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal {
+    padding-top: 80px;
+  }
+  /* line 495, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .modalLogo {
+    bottom: 60px;
+    right: 15px;
+  }
+  /* line 500, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal .buttonTextLite {
+    transform: translateX(35px) translateY(35px);
+  }
+  /* line 504, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+  .modal #errorAlertSignIn {
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* line 516, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp {
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(6, 17, 31, 0.6);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+/* line 533, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp.popUp_active {
+  visibility: visible;
+  opacity: 1;
+}
+/* line 537, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp.popUp_active > .popUp__window {
+  visibility: visible;
+  transform: translateY(-50%) scaleY(1);
+}
+/* line 543, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp__window {
+  visibility: hidden;
+  position: fixed;
+  width: 600px;
+  min-height: 300px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 10500;
+  margin: 0 auto;
+  padding: 25px 30px 50px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 20px 40px 5px rgba(11, 11, 43, 0.3);
+  background-color: #f3f5f7;
+  transition: transform 200ms ease-in-out;
+  transform-origin: 50% 50%;
+  transform: translateY(-50%) scaleY(0);
+}
+/* line 564, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp__window_notDate {
+  padding: 25px 30px;
+}
+/* line 569, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp__close {
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 10px;
+  right: 10px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(50, 50, 50, 0.3)" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+/* line 582, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp__close:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(50, 50, 50, 0.7)" d="M27.195 23.996l5.648-5.648c.221-.222.221-.585 0-.806l-2.383-2.383c-.221-.221-.583-.221-.805 0l-5.649 5.649-5.653-5.652c-.222-.221-.584-.221-.805 0l-2.383 2.384c-.222.22-.222.582 0 .806l5.652 5.651-5.65 5.65c-.22.22-.22.583 0 .805l2.383 2.383c.222.22.586.22.806 0l5.649-5.649 5.646 5.647c.221.221.585.221.806 0l2.384-2.384c.22-.22.22-.583 0-.806l-5.646-5.647z"/></svg>');
+}
+/* line 587, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp__title {
+  margin: 0 0 30px;
+  padding-right: 25px;
+}
+/* line 595, /home/karkleo/sbs/app/assets/stylesheets/_modalSignIn.scss */
+.popUp__date {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  line-height: 40px;
+}

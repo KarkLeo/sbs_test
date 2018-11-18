@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
+
+    <title>SPS</title>
+</head>
+
+<body>
+    <div class="mainPageContainer">
+        <header class="header">
+            <div class="mainLogo">
+                    <img src="./img/SBS_logo_main.svg" alt="SBS Logotype">
+            </div>
+            <div class="mainLogoSmall">
+                <img src="./img/SBS_logo.svg" alt="SBS Logotype">
+            </div>
+            <nav class="mainMenu">
+                <ul class="menuList">
+                    <li>
+                        <a href="">Service</a>
+                    </li>                    
+                    <li>
+                        <a href="">Support</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Contacts</a>
+                    </li>
+                </ul>
+                <a href="#sideBar" class="mainMenu__button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </nav>
+            <div class="userBar">
+                <a href="#signIn" class="signIn">Вход</a>
+                <div class="language">
+                    <a href="" class="languageSelected">RU</a>
+                    <ul class="languagelist">
+                        <li>
+                            <a href="">RU</a>
+                        </li>
+                        <li>
+                            <a href="">EN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class='mainContainer'>
+            <h1 class="mainTitle">
+                ТОТАЛЬНАЯ МОНЕТИЗАЦИЯ
+                <br>
+                <b>ЛЮБЫХ ИСТОЧНИКОВ ТРАФИКА</b>
+            </h1>
+            <p class="mainDescription">Закупки трафика напрямую у вебмастеров.
+                <br> Продажи рекламодателям в формате on-click.</p>
+
+
+            <form action="registration.html" method="post">
+                <div class="select">
+                    <a href="" class="placeholder">You are:</a>
+                    <ul class="selectList">
+                        <li class="selectOption">Publisher</li>
+                        <li class="selectOption">Advertiser</li>
+                    </ul>
+                </div>
+                <select name="role">
+                    <option value="" disabled selected>You are:</option>
+                    <option value="Publisher">Publisher</option>
+                    <optionvalue="Advertiser">Advertiser</option>
+                </select>
+                <input type="submit" name="commit" value="Register" data-disable-with="Register"/>
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="footerContent">
+                <div class="footerLogo">
+                    <img src="./img/SBS_logo.svg" alt="SBS Logotype">
+                </div>
+                <div class="documents">
+                    <ul class="menuList">
+                        <li>
+                            <a href="">Пользовательское Соглашение</a>
+                        </li>
+                        <li>
+                            <a href="">Конфиденциальность</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul class="menuList">
+                        <li>
+                            <a href="" id="fb"></a>
+                        </li>
+                        <li>
+                            <a href="" id="vk"></a>
+                        </li>
+                        <li>
+                            <a href="" id="tw"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">© Copyright SBS</div>
+
+        </footer>
+    </div>
+    <a href="#x" class="overlay" id="signIn"></a>
+    <div id="modalSignIn" class="modal">
+        <div class="modalLogo">
+            <img src="./img/SBS_logo.svg" alt="SBS Logotype">
+        </div>
+        <h2 class="modalFormTitle">Welcome to
+            <b>SBS</b>
+        </h2>
+        <form action="" class="modalForm">
+            <input type="text" id="modalFormName" class="formInputText" name="modalFormName" placeholder="Name">
+            <input type="password" id="modalFormPassword" class="formInputText" name="modalFormPassword" placeholder="Phone">
+            <div class="signInButtons">
+                <a href="registration.html" class="forgotPassword formText">Forgot password?</a>
+                <input type="submit" class="modalFormSignIn" name="modalFormSignIn" value="Log In" data-disable-with="Log In" />
+            </div>
+        </form>
+    </div>
+
+    <a href="#x" class="overlaySideBar" id="sideBar"></a>
+    <div id="sideBarMenu" class="sideBar">
+        <div class="sideBarLogo">
+            <img src="./img/SBS_logo.svg" alt="SBS Logotype">
+        </div>
+        <ul class="menuList">
+            <li>
+                <a href="" id="service">Service</a>
+            </li>                    
+            <li>
+                <a href="" id="support">Support</a>
+            </li>
+            <li>
+                <a href="" id="about">About</a>
+            </li>
+            <li>
+                <a href="" id="contacts">Contacts</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

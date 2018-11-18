@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Registration</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+	<div class="pageContainer">
+		<header class="header">
+			<div class="container">
+				<div class="headerLogo">
+					<a href="index.html">
+						<img src="./img/SBS_logo.svg" alt="SBS Logotype">
+					</a>
+				</div>
+				<nav class="mainMenu">
+					<ul class="menuList">
+						<li>
+							<a href="">Service</a>
+						</li>
+						<li>
+							<a href="">Support</a>
+						</li>
+						<li>
+							<a href="">About</a>
+						</li>
+						<li>
+							<a href="">Contacts</a>
+						</li>
+					</ul>
+					<a href="#sideBar" class="mainMenu__button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</nav>
+				<div class="userBar">
+					<a href="#signIn" class="signIn">Вход</a>
+					<div class="language">
+						<a href="" class="languageSelected">RU</a>
+						<ul class="languagelist">
+							<li>
+								<a href="">RU</a>
+							</li>
+							<li>
+								<a href="">EN</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="mainContainer pageFormRegistration">
+			<h1 class="mainTitle">Регистрация</h1>
+			<p class="mainDescription">Пожалуйста заполните все поля этой регистрационной формы</p>
+
+			<form id="registrationForm" action="/en/users/sign_up" accept-charset="UTF-8" method="get">
+				<div class="rolesBlock">
+					<label>
+						<span class="label">Я Рекламодатель</span>
+						<input type="radio" name="roles" class="roles checkTick" value="advertiser">
+						<span class="checkbox"></span>
+					</label>
+					<label>
+						<span class="label">Я Паблишер</span>
+						<input type="radio" name="roles" class="roles checkTick" value="publisher">
+						<span class="checkbox"></span>
+					</label>
+				</div>
+
+				<div>
+					<label for="name">Имя
+						<span class="errorAlert">Error message here</span>
+					</label>
+					<input id="name" type="text" name="name">
+				</div>
+				<div>
+					<label for="surname" class="error">Фамилия
+						<span class="errorAlert">Error message here</span>
+					</label>
+					<input id="surname" type="text" name="surname">
+				</div>
+				<div>
+					<label for="dateOfBirth">Дата рождения
+						<span class="errorAlert">Error message here</span>
+					</label>
+					<input id="dateOfBirth" type="text" name="dateOfBirth" placeholder="YYYY-MM-DD">
+				</div>
+				<div>
+					<label for="email">E-mail
+						<span class="errorAlert">Error message here</span>
+					</label>
+					<input id="email" type="email" name="email">
+				</div>
+				<div>
+					<label for="password">Пароль
+						<span class="errorAlert">Error message here</span>
+					</label>
+					<div class="password">
+						<input id="password" type="text" name="password">
+						<button class="copy"></button>
+					</div>
+				</div>
+
+				<div>
+					<fieldset id="language">
+						<legend class="formTitle">Язык интерфейса</legend>
+						<label>
+							<span class="label">Русский</span>
+							<input type="radio" name="interfaceLanguage" class="interfaceLanguage checkTick">
+							<span class="checkbox"></span>
+						</label>
+						<label>
+							<span class="label">Deutsch</span>
+							<input type="radio" name="interfaceLanguage" class="interfaceLanguage checkTick">
+							<span class="checkbox"></span>
+						</label>
+						<label>
+							<span class="label">English</span>
+							<input type="radio" name="interfaceLanguage" class="interfaceLanguage checkTick">
+							<span class="checkbox"></span>
+						</label>
+					</fieldset>
+				</div>
+
+				<div id="timeZoneBlock">
+					<label for="timeZone">Часовой пояс:
+						<span class="errorAlert">Error message here</span>
+					</label>
+					<input type="text" id="timeZone" class="placeholder" name="timeZone" placeholder="Или напишите свой Часовой Пояс">
+					<div class="select">
+						<ul class="selectList">
+							<li class="selectOption">UTC+1</li>
+							<li class="selectOption">UTC+2</li>
+							<li class="selectOption">UTC+3</li>
+							<li class="selectOption">UTC+4</li>
+						</ul>
+					</div>
+					<select id="timeZoneList" name="timeZoneList">
+						<option>UTC+1</option>
+						<option>UTC+2</option>
+						<option>UTC+3</option>
+						<option>UTC+4</option>
+					</select>
+				</div>
+
+				<div id="contact">
+					<div class="left">
+						<label for="contacts">Метод связи:</label>
+
+						<select id="contactTools" name="contactTools">
+							<option>Whatsapp</option>
+							<option>Viber</option>
+							<option>Skype</option>
+							<option>Telegram</option>
+						</select>
+						<a href="" class="placeholder">You are:</a>
+						<div class="select">
+							<ul class="selectList">
+								<li class="selectOption">Whatsapp</li>
+								<li class="selectOption">Viber</li>
+								<li class="selectOption">Skype</li>
+								<li class="selectOption">Telegram</li>
+							</ul>
+						</div>
+					</div>
+					<div class="right">
+						<label for="contactDetails">nick /email / tel</label>
+						<input id="contactDetails" name="contactDetails" type="text">
+					</div>
+				</div>
+
+				<div class="userAgreement">
+					<label>
+						<input type="checkbox" name="userAgreement" id="userAgreement" class="checkTick">
+						<span class="checkbox"></span>
+						<span class="label">Я принимаю условия пользовательского соглашения</span>
+					</label>
+				</div>
+				<div>
+					<input type="submit" name="commit" value="Зарегистрироваться" data-disable-with="Register" />
+				</div>
+			</form>
+		</main>
+
+		<footer class="footer">
+
+			<div class="container">
+				<div class="footerContent">
+					<div class="footerLogo">
+						<a href="#">
+							<img src="./img/SBS_logo.svg" alt="SBS Logotype">
+						</a>
+					</div>
+					<div class="documents">
+						<ul class="menuList">
+							<li>
+								<a href="">Пользовательское Соглашение</a>
+							</li>
+							<li>
+								<a href="">Конфиденциальность</a>
+							</li>
+						</ul>
+					</div>
+					<div class="social">
+						<ul class="menuList">
+							<li>
+								<a href="" id="fb"></a>
+							</li>
+							<li>
+								<a href="" id="vk"></a>
+							</li>
+							<li>
+								<a href="" id="tw"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="copyright">© Copyright SBS</div>
+			</div>
+		</footer>
+	</div>
+
+	<a href="#x" class="overlay" id="signIn"></a>
+	<div id="modalSignIn" class="modal">
+		<div class="modalLogo">
+			<img src="./img/SBS_logo.svg" alt="SBS Logotype">
+		</div>
+		<h2 class="modalFormTitle">Welcome to
+			<b>SBS</b>
+		</h2>
+		<form action="" class="modalForm">
+			<input type="text" id="modalFormName" class="formInputText" name="modalFormName" placeholder="Name">
+			<input type="password" id="modalFormPassword" class="formInputText" name="modalFormPassword" placeholder="Phone">
+			<div class="signInButtons">
+				<a href="registration.html" class="forgotPassword formText">Forgot password?</a>
+				<input type="submit" class="modalFormSignIn" name="modalFormSignIn" value="Log In" data-disable-with="Log In" />
+			</div>
+		</form>
+	</div>
+
+	<a href="#x" class="overlaySideBar" id="sideBar"></a>
+	<div id="sideBarMenu" class="sideBar">
+		<div class="sideBarLogo">
+			<a href="">
+				<img src="./img/SBS_logo.svg" alt="SBS Logotype">
+			</a>
+		</div>
+		<ul class="menuList">
+			<li>
+				<a href="" id="service">Service</a>
+			</li>
+			<li>
+				<a href="" id="support">Support</a>
+			</li>
+			<li>
+				<a href="" id="about">About</a>
+			</li>
+			<li>
+				<a href="" id="contacts">Contacts</a>
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>
